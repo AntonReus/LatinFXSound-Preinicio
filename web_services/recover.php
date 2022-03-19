@@ -23,26 +23,21 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title" id="membershipFormLabel">Inicio de Sesion</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h2 class="modal-title" id="membershipFormLabel">Recuperacion de contraseña</h2>
+                    <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="../index.php>
                         <span aria-hidden="true">&times;</span>
-                    </button>
+                    </a>
                 </div>
             <div class="modal-body">
                 <form method="post" class="membership-form webform" role="form" action="">
                     <?php include('errors.php'); ?>
+                    Introduce tu correo electronico
                     <div class="input-group">
                         <input type="email" class="form-control" name="user_email" placeholder="Direccion email">
                     </div>
                     <div class="input-group">
-                        <input type="password" class="form-control" name="user_password" placeholder="Contraseña">
+                        <button type="submit" class="form-control" id="login_user" name="">Continuar</button>
                     </div>
-                    <div class="input-group">
-                        <button type="submit" class="form-control" id="login_user" name="login_user">Continuar</button>
-                    </div>
-                    <br><p>
-                        Aun no te has registrado? <a href="web_services/register.php">Registrate ahora mismo</a>
-                    </p>
                 </form>
             </div>
             <div class="modal-footer"></div>

@@ -23,7 +23,11 @@
 <body>
     <section class="registrer bg-overlay modal-dialog-center" role="document">
         <div class="modal-content modal-dialog">
-            <div class="modal-header" ass="modal-title" id="membershipFormLabel"><h2>Crear nueva cuenta</h2></div>
+            <div class="modal-header" ass="modal-title" id="membershipFormLabel"><h2>Crear nueva cuenta</h2>
+                <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="../index.php">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
             <div class="modal-body">
                 <form class="registrer_form" id="registrer_form" role="form" method="post" action="">
                     <?php include('errors.php'); ?>
