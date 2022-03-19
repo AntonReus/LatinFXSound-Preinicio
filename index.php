@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +108,7 @@
 
                     
 
-                    <a href="#" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="#membershipForm">Compra tu subscripcion</a>
+                    <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php">Compra tu subscripcion</a>
                 </div>
 
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
@@ -298,62 +299,6 @@
                </div>
           </div>
      </footer>
-
-    <!-- crear cuenta nueva -->
-    <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-
-        <div class="modal-content">
-          <div class="modal-header">
-
-            <h2 class="modal-title" id="membershipFormLabel">Crear nueva cuenta</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <div class="modal-body">
-            <form class="registrer_form" id="registrer_form" role="form">
-                
-
-                <input type="email" class="form-control" id="user_email" name="email" placeholder="Direccion email">
-                <span id="email_error"></span>
-
-                <input type="text" class="form-control" id="user_password" name="password" placeholder="Contraseña">
-                <span id="password_error" class="ch_error"></span>
-
-                <div>
-
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="signup-agree">
-                    <label class="custom-control-label text-small text-muted" for="signup-agree">Acepto los <a href="#">Terms &amp;Conditions</a>
-                    </label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="signup-agree">
-                    <label class="custom-control-label text-small text-muted" for="signup-agree">Tengo mas de 18 años
-                    </label>
-                </div>
-
-                <!--<input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
-                <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea> -->
-            </form>
-          </div>
-          <div class="modal-footer">
-                <p class="float-left" id="msg"></p>
-                <button type="button" class="form-control" id="verify_ajax" name="submit">Continuar</button>
-                <button class="form-control" type="button" disabled id="snipper">
-                    <span role="status" aria-hidden="true"></span>
-                    Pleas wait...
-                </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
      <!-- Iniciar sesion -->
     <div class="modal fade" id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">

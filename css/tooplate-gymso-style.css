@@ -242,6 +242,12 @@ https://www.tooplate.com/view/2119-gymso-fitness
     color: var(--primary-color);
   }
 
+  .modal-dialog-center{
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
 
   /*---------------------------------------
     FEATURE          
@@ -372,6 +378,19 @@ https://www.tooplate.com/view/2119-gymso-fitness
     position: relative;
   }
 
+  /*---------------------------------------
+     REGISTRERIMG              
+  -----------------------------------------*/
+
+  .registrer {
+    background-image: url('../images/Registrer1.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    min-height: 100vh;
+    position: absolute;
+  }
 
   /*---------------------------------------
      CLASS               
