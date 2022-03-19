@@ -314,14 +314,20 @@
           </div>
 
           <div class="modal-body">
-            <form class="membership-form webform" role="form">
+            <form class="registrer_form" id="registrer_form" role="form">
                 
 
-                <input type="email" class="form-control" name="cf-email" placeholder="Direccion email">
+                <input type="email" class="form-control" id="user_email" name="email" placeholder="Direccion email">
+                <span id="email_error"></span>
 
-                <input type="text" class="form-control" name="cf-name" placeholder="Contraseña">
+                <input type="text" class="form-control" id="user_password" name="password" placeholder="Contraseña">
+                <span id="password_error" class="ch_error"></span>
 
-                 <div class="custom-control custom-checkbox">
+                <div>
+
+                </div>
+
+                <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="signup-agree">
                     <label class="custom-control-label text-small text-muted" for="signup-agree">Acepto los <a href="#">Terms &amp;Conditions</a>
                     </label>
@@ -335,15 +341,16 @@
                 <!--<input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 
                 <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea> -->
-
-                <button type="submit" class="form-control" id="submit-button" name="submit">Continuar</button>
-
-               
             </form>
           </div>
-
-          <div class="modal-footer"></div>
-
+          <div class="modal-footer">
+                <p class="float-left" id="msg"></p>
+                <button type="button" class="form-control" id="verify_ajax" name="submit">Continuar</button>
+                <button class="form-control" type="button" disabled id="snipper">
+                    <span role="status" aria-hidden="true"></span>
+                    Pleas wait...
+                </button>
+          </div>
         </div>
       </div>
     </div>
@@ -394,6 +401,7 @@
      <script src="js/aos.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="js/own.js"></script>
 
 </body>
 </html>
