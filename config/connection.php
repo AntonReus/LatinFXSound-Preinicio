@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+//***************Registro */
+
 // initializing variables
 $email    = "";
 $password_1 = "";
@@ -48,4 +50,33 @@ if (isset($_POST['reg_user'])) {
       //Direccionar a pagina principal o biblioteca de musica
     header("Location: ../index.php");
   }
+
+    //***************Registro */
+
+    if (isset($_POST['login_user'])) {
+        $email = mysqli_real_escape_string($db, $_POST['user_email']);
+        $password = mysqli_real_escape_string($db, $_POST['user_password']);
+      
+        if (empty($email)) {
+            array_push($errors, "Username is required");
+        }
+        if (empty($password)) {
+            array_push($errors, "Password is required");
+        }
+      
+        if (count($errors) == 0) {
+            $password = md5($password);
+            $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+            $results = mysqli_query($db, $query);
+            if (mysqli_num_rows($results) == 1) {
+              $_SESSION['user_email'] = $username;
+              $_SESSION['success'] = "You are now logged in";
+              //direccionar a pagina principal o biblioteca de musica
+              header('location: index.php');
+            }else {
+                array_push($errors, "Wrong username/password combination");
+            }
+        }
+      } 
 }
+?>

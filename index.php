@@ -1,4 +1,4 @@
-
+<?php include('config/connection.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -300,44 +300,35 @@
           </div>
      </footer>
 
-     <!-- Iniciar sesion -->
+    <!-- Iniciar sesion -->
     <div class="modal fade" id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-
-        <div class="modal-content">
-          <div class="modal-header">
-
-            <h2 class="modal-title" id="membershipFormLabel">Inicio de Sesion</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <div class="modal-body">
-            <form class="membership-form webform" role="form">
-                
-
-                <input type="email" class="form-control" name="cf-email" placeholder="Direccion email">
-
-                <input type="text" class="form-control" name="cf-name" placeholder="Contraseña">
-
-                 
-
-                <!--<input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
-                <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea> -->
-
-                <button type="submit" class="form-control" id="submit-button" name="submit">Continuar</button>
-
-               
-            </form>
-          </div>
-
-          <div class="modal-footer"></div>
-
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="membershipFormLabel">Inicio de Sesion</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+                <form method="post" class="membership-form webform" role="form" action="index.php">
+                    <?php include('web_services/errors.php'); ?>
+                    <div class="input-group">
+                        <input type="email" class="form-control" name="user_email" placeholder="Direccion email">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="user_password" placeholder="Contraseña">
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="form-control" id="login_user" name="login_user">Continuar</button>
+                    </div>
+                    <br><p>
+                        Aun no te has registrado? <a href="web_services/register.php">Registrate ahora mismo</a>
+                    </p>
+                </form>
+            </div>
+            <div class="modal-footer"></div>
         </div>
-      </div>
     </div>
 
      <!-- SCRIPTS -->

@@ -52,7 +52,6 @@
                         <button type="submit" class="form-control" name="reg_user" href="../index.php">Registrate</button>
                     </div>
                 </form>
-                
             </div>
         </div>
     </section>
