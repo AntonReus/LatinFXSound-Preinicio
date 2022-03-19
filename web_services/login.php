@@ -1,4 +1,5 @@
 <?php include('../config/connection.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
      <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
 </head>
 <body>
-<div class="" id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+    <div class="registrer bg-overlay modal-dialog-center" id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -28,13 +29,13 @@
                     </button>
                 </div>
             <div class="modal-body">
-                <form method="post" class="membership-form webform" role="form" action="index.php">
-                    <?php include('web_services/errors.php'); ?>
+                <form method="post" class="membership-form webform" role="form" action="">
+                    <?php include('errors.php'); ?>
                     <div class="input-group">
                         <input type="email" class="form-control" name="user_email" placeholder="Direccion email">
                     </div>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="user_password" placeholder="Contraseña">
+                        <input type="password" class="form-control" name="user_password" placeholder="Contraseña">
                     </div>
                     <div class="input-group">
                         <button type="submit" class="form-control" id="login_user" name="login_user">Continuar</button>

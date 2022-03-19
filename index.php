@@ -1,4 +1,5 @@
 <?php include('config/connection.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -311,19 +312,19 @@
                     </button>
                 </div>
             <div class="modal-body">
-                <form method="post" class="membership-form webform" role="form" action="index.php">
+            <form method="post" class="membership-form webform" role="form" action="">
                     <?php include('web_services/errors.php'); ?>
                     <div class="input-group">
                         <input type="email" class="form-control" name="user_email" placeholder="Direccion email">
                     </div>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="user_password" placeholder="Contraseña">
+                        <input type="password" class="form-control" name="user_password" placeholder="Contraseña">
                     </div>
                     <div class="input-group">
                         <button type="submit" class="form-control" id="login_user" name="login_user">Continuar</button>
                     </div>
                     <br><p>
-                        Aun no te has registrado? <a href="web_services/register.php">Registrate ahora mismo</a>
+                        Aun no te has registrado? <a href="web_services/registrer.php">Registrate ahora mismo</a>
                     </p>
                 </form>
             </div>

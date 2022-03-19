@@ -40,13 +40,13 @@
                         <span id="password_error" class="ch_error"></span>
                     </div>
                     <p><div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="signup-agree">
-                        <label class="custom-control-label text-small text-muted" for="signup-agree">Acepto los <a href="#">Terms &amp;Conditions</a>
+                        <input type="checkbox" class="custom-control-input" id="signup-agree_1" name="signup-agree_1">
+                        <label class="custom-control-label text-small text-muted" for="signup-agree_1">Acepto los <a href="#">Terms &amp;Conditions</a>
                         </label>
                     </div>
                     <p><div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="signup-agree2">
-                        <label class="custom-control-label text-small text-muted" for="signup-agree2">Tengo mas de 18 años</label>
+                        <input type="checkbox" class="custom-control-input" id="signup-agree_2" name="signup-agree_2">
+                        <label class="custom-control-label text-small text-muted" for="signup-agree_2">Tengo mas de 18 años</label>
                     </div>
                     <div class="input-group">
                         <button type="submit" class="form-control" name="reg_user" href="../index.php">Registrate</button>
