@@ -17,6 +17,9 @@
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
 
+     
+     <script src="js/translate.js"></script>
+
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-gymso-style.css">
 
@@ -41,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll lang" key="Acerca de">Acerca de nosotros</a>
+                        <a href="#about" class="nav-link smoothScroll lang" key="Acerca">Acerca de nosotros</a>
                     </li>
 
                     <li class="nav-item">
@@ -64,8 +67,8 @@
                 </ul>
                 
                 <ul class="social-icon ml-lg-3">
-                    <li><button class="translate lang" id="en" key="button1">English</button></li>
-                    <li><button class="translate" id="es">Español</button></li>
+                    <li><button class="nav-item translate lang-choice" id="en" onclick="changeLanguage(this.id)">English</button></li>
+                    <li><button class="nav-item translate lang-choice" id="es" onclick="changeLanguage(this.id)">Español</button></li>
                 </ul>
             </div>
 
@@ -377,6 +380,6 @@
      <script src="js/custom.js"></script>
      <script src="js/own.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+     <script src="js/jquery-3.6.0.min.js"></script>
 </body>
 </html>
