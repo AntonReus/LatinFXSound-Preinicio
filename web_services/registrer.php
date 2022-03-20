@@ -53,7 +53,7 @@
                         <label class="custom-control-label text-small text-muted" for="signup-agree_2">Tengo mas de 18 años</label>
                     </div>
                     <div class="input-group">
-                        <button type="submit" class="form-control" name="reg_user" href="../index.php">Registrate</button>
+                        <button type="submit" class="form-control" name="reg_user" href="index.php">Registrate</button>
                     </div>
                 </form>
             </div>

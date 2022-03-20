@@ -86,6 +86,18 @@
                                     <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Comienza ahora</a>
 
                                     <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">Ya eres miembro? inicia sesion</a>
+
+                                    <h4 class="text-white" data-aos="fade-up" data-aos-delay="600" align="rigth">Sonido de prueba
+                                        <br>
+                                            <div>
+                                                <img src="images/huevo.jpg" class="img-fluid" alt="Class" width="200" height="200">
+                                        <audio controls>
+                                            <source src="audios/huevo.mp3" type="audio/mp3">
+                                                    Tu navegador no soporta audio HTML5.
+                                        </audio>
+                                            </div>
+                                        
+                                    </h4>
                                    
                               </div>
                          </div>
@@ -154,7 +166,7 @@
                                     <div class="team-info d-flex flex-column">
 
                                         <h3>Produccion</h3>
-                                        <span>sonidos oriiginales</span>
+                                        <span>sonidos originales</span>
 
                                         <ul class="social-icon mt-3">
                                             <li><a href="#" class="fa fa-twitter"></a></li>
@@ -267,9 +279,29 @@
                             <button type="submit" class="form-control" id="submit-button" name="submit">Enviar mensaje</button>
                         </form>
                     </div>
+               
+                    <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
+                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">Donde puedes<span>encontrarnos</span></h2>
+
+                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> Direccion del cliente</p>
+<!-- How to change your own map point
+    1. Ir a google map
+    2. Click en la localidad del cliente
+    3. Click en "compartir" y elegir "incorporar un mapa" tab
+    4. Copiar solo la URL en el campo src="" 
+-->
+                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
+                           <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    
                </div>
           </div>
      </section>
+
+
+     
+    
 
                     
 

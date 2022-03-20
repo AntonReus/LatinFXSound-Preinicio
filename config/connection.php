@@ -86,6 +86,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION['success'] = "Inicio de sesion exitoso";
             //direccionar a pagina principal o biblioteca de musica
             header('location: biblioteca.php');
+            header('location: index.php');
         }else {
             array_push($errors, "La contraseña y el correo no coincide. Vuelva a intentar.");
         }
