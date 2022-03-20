@@ -37,11 +37,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll">Inicio</a>
+                        <a href="#home" class="nav-link smoothScroll lang" key="Inicio">Inicio</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">Acerca de nosotros</a>
+                        <a href="#about" class="nav-link smoothScroll lang" key="Acerca de">Acerca de nosotros</a>
                     </li>
 
                     <li class="nav-item">
@@ -62,6 +62,11 @@
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
+                
+                <ul class="social-icon ml-lg-3">
+                    <li><button class="translate lang" id="en" key="button1">English</button></li>
+                    <li><button class="translate" id="es">Español</button></li>
+                </ul>
             </div>
 
         </div>
@@ -79,7 +84,7 @@
                          <div class="col-lg-8 col-md-10 mx-auto col-12">
                               <div class="hero-text mt-5 text-center">
 
-                                    <h6 data-aos="fade-up" data-aos-delay="300">La mejor musica libre de derechos</h6>
+                                    <h6 data-aos="fade-up" data-aos-delay="300" class="lang" key="Tex1">La mejor musica libre de derechos</h6>
 
                                     <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Descarga la musica de ambientacion que necesites</h1>
 

@@ -1,0 +1,14 @@
+{
+    "es":{
+        "Inicio":"Inicio",
+        "Acerca de":"Acerca de nosotros",
+        "button":"English",
+        "Tex1":"Acerca de los monos"
+    },
+    "en":{
+        "Inicio":"Home",
+        "Acerca de":"About us",
+        "button":"English1",
+        "Tex1":"About de los monos"
+    }
+}
