@@ -1,7 +1,7 @@
 <?php include('config/connection.php') ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 
      <title>LATINFXSOUND***</title>
@@ -371,6 +371,7 @@
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
      <script src="js/own.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </body>
 </html>
