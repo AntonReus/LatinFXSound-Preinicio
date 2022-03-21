@@ -37,23 +37,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Inicio']?></a>
+                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll" key="Acerca">Acerca de nosotros</a>
+                        <a href="#about" class="nav-link smoothScroll" key="Acerca"><?php echo $lang['Nav2']?></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#sonidos" class="nav-link smoothScroll">Sonidos</a>
+                        <a href="#sonidos" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion">Iniciar sesion</a>
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contacto</a>
+                        <a href="#contact" class="nav-link smoothScroll"><?php echo $lang['Nav5']?></a>
                     </li>
                 </ul>
                 <ul class="social-icon ml-lg-3">
@@ -71,60 +71,57 @@
         </div>
     </nav>
 
-     <!-- HERO -->
-     <section class="hero d-flex flex-column justify-content-center align-items-center">
-            <div class="bg-overlay"></div>
-               <div class="container">
-                    <div class="row">
-                         <div class="col-lg-8 col-md-10 mx-auto col-12">
-                              <div class="hero-text mt-5 text-center">
-                                    <h6 data-aos="fade-up" data-aos-delay="300">La mejor musica libre de derechos</h6>
-                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Descarga la musica de ambientacion que necesites</h1>
-                                    <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Comienza ahora</a>
-                                    <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">Ya eres miembro? inicia sesion</a>
-                                    <br><br><br><h4 class="text-white" data-aos="fade-up" data-aos-delay="600" align="rigth">Sonido de prueba
-                                        <br><br>
-                                            <div>
-                                                <img src="images/huevo.jpg" class="img-fluid" alt="Class" width="200" height="200">
-                                        <audio controls>
-                                            <source src="audios/huevo.mp3" type="audio/mp3">
-                                                    Tu navegador no soporta audio HTML5.
-                                        </audio>
-                                            </div>
-                                        
-                                    </h4>
-                                   
-                              </div>
-                         </div>
-
+    <!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center">
+        <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto col-12">
+                        <div class="hero-text mt-5 text-center">
+                            <h6 data-aos="fade-up" data-aos-delay="300"><?php echo $lang['Hero1']?></h6>
+                            <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Hero2']?></h1>
+                            <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Hero3']?></a>
+                            <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Hero4']?></a>
+                            <br><br><br><h4 class="text-white" data-aos="fade-up" data-aos-delay="600" align="rigth"><?php echo $lang['Hero5']?><br><br>
+                            <div>
+                                <img src="images/huevo.jpg" class="img-fluid" alt="Class" width="200" height="200">
+                                <audio controls>
+                                <source src="audios/huevo.mp3" type="audio/mp3">
+                                <?php echo $lang['Hero6']?>
+                                </audio>
+                            </div>
+                        </div>
                     </div>
-               </div>
-     </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!--  Inicio de session  -->
      <section class="feature" id="feature">
         <div class="container">
             <div class="row">
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
-                    <h2 class="mb-3 text-white" data-aos="fade-up">Nuevo en LATINXSOUND?</h2>
+                    <h2 class="mb-3 text-white" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
 
-                    <h6 class="mb-4 text-white" data-aos="fade-up">Membresia mensual</h6>
-                    <h6 class="mb-4 text-white" data-aos="fade-up">Membresia trimestral</h6>
-                    <h6 class="mb-4 text-white" data-aos="fade-up">Membresia semestral</h6>
-                    <h6 class="mb-4 text-white" data-aos="fade-up">Membresia anual</h6>
-                    <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php">Compra tu subscripcion</a>
+                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini2']?></h6>
+                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini3']?></h6>
+                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini4']?></h6>
+                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini5']?></h6>
+                    <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><?php echo $lang['Nav4']?></a>
                 </div>
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
                      <div class="about-working-hours">
                           <div>
-                                <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">Formas de pago</h2>
+                                <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Ini6']?></h2>
 
-                               <strong class="d-block" data-aos="fade-up" data-aos-delay="600">Visa</strong>
+                               <strong class="d-block" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Ini7']?></strong>
 
-                               <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Master Card</strong>
+                               <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Ini8']?></strong>
 
-                               <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">American Express</strong>
+                               <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Ini9']?></strong>
 
-                                <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">PayPal</strong>
+                                <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Ini10']?></strong>
                           </div>
                      </div>
                 </div>
