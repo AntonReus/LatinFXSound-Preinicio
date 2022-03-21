@@ -63,8 +63,8 @@
                 </ul>
                 <ul class="social-icon ml-lg-3">
                     <li>
-                        <a href="index.php?lang=es"><?php echo $lang['es']?></option>
-                        <a href="index.php?lang=en"><?php echo $lang['en']?></option>
+                        <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                        <a href="index.php?lang=en"><?php echo $lang['en']?></a>
                     </li>
                 </ul>
             </div>
