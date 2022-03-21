@@ -134,9 +134,9 @@
                <div class="container">
                     <div class="row">
                             <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
-                                <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Somos LatinFXsound</h2>
+                                <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300"><?php echo $lang['About1']?></h2>
 
-                                <p data-aos="fade-up" data-aos-delay="400">Somos un grupo que se dedica a la creacion de sonidos libres de derechos y de autoria propia ideal para tus proyectos de produccion musical.</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><?php echo $lang['About2']?></p>
 
                             </div>
 
@@ -146,7 +146,7 @@
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>Produccion</h3>
+                                        <h3><?php echo $lang['About3']?></h3>
                                         <span>sonidos originales</span>
 
                                         <ul class="social-icon mt-3">
