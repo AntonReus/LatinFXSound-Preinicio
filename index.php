@@ -1,4 +1,5 @@
 <?php include('config/connection.php') ?>
+<?php include"language/config.php" ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -16,9 +17,8 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
-
      
-     <script src="js/translate.js"></script>
+     <!--Multilanguage-->
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-gymso-style.css">
@@ -29,22 +29,19 @@
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-
-            <a class="navbar-brand" href="index.html">LATINFXSOUND***</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            <div><a class="navbar-brand" href="index.html">LATINFXSOUND***</a></div>
+            <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-
+            </button></div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll lang" key="Inicio">Inicio</a>
+                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Inicio']?></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll lang" key="Acerca">Acerca de nosotros</a>
+                        <a href="#about" class="nav-link smoothScroll" key="Acerca">Acerca de nosotros</a>
                     </li>
 
                     <li class="nav-item">
@@ -59,44 +56,34 @@
                         <a href="#contact" class="nav-link smoothScroll">Contacto</a>
                     </li>
                 </ul>
-
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
-                
                 <ul class="social-icon ml-lg-3">
-                    <li><button class="nav-item translate lang-choice" id="en" onclick="changeLanguage(this.id)">English</button></li>
-                    <li><button class="nav-item translate lang-choice" id="es" onclick="changeLanguage(this.id)">Español</button></li>
+                    <li>
+                        <a href="index.php?lang=es"><?php echo $lang['es']?></option>
+                        <a href="index.php?lang=en"><?php echo $lang['en']?></option>
+                    </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
-
      <!-- HERO -->
-     <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
-
+     <section class="hero d-flex flex-column justify-content-center align-items-center">
             <div class="bg-overlay"></div>
-
                <div class="container">
                     <div class="row">
-
                          <div class="col-lg-8 col-md-10 mx-auto col-12">
                               <div class="hero-text mt-5 text-center">
-
-                                    <h6 data-aos="fade-up" data-aos-delay="300" class="lang" key="Tex1">La mejor musica libre de derechos</h6>
-
+                                    <h6 data-aos="fade-up" data-aos-delay="300">La mejor musica libre de derechos</h6>
                                     <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Descarga la musica de ambientacion que necesites</h1>
-
                                     <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Comienza ahora</a>
-
                                     <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">Ya eres miembro? inicia sesion</a>
-
-                                    <h4 class="text-white" data-aos="fade-up" data-aos-delay="600" align="rigth">Sonido de prueba
-                                        <br>
+                                    <br><br><br><h4 class="text-white" data-aos="fade-up" data-aos-delay="600" align="rigth">Sonido de prueba
+                                        <br><br>
                                             <div>
                                                 <img src="images/huevo.jpg" class="img-fluid" alt="Class" width="200" height="200">
                                         <audio controls>
@@ -114,11 +101,9 @@
                </div>
      </section>
 
-
      <section class="feature" id="feature">
         <div class="container">
             <div class="row">
-
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
                     <h2 class="mb-3 text-white" data-aos="fade-up">Nuevo en LATINXSOUND?</h2>
 
@@ -126,16 +111,11 @@
                     <h6 class="mb-4 text-white" data-aos="fade-up">Membresia trimestral</h6>
                     <h6 class="mb-4 text-white" data-aos="fade-up">Membresia semestral</h6>
                     <h6 class="mb-4 text-white" data-aos="fade-up">Membresia anual</h6>
-
-                    
-
                     <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php">Compra tu subscripcion</a>
                 </div>
-
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
                      <div class="about-working-hours">
                           <div>
-
                                 <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">Formas de pago</h2>
 
                                <strong class="d-block" data-aos="fade-up" data-aos-delay="600">Visa</strong>
@@ -152,18 +132,14 @@
         </div>
     </section>
 
-
      <!-- ABOUT -->
      <section class="about section" id="about">
                <div class="container">
                     <div class="row">
-
                             <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
                                 <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Somos LatinFXsound</h2>
 
                                 <p data-aos="fade-up" data-aos-delay="400">Somos un grupo que se dedica a la creacion de sonidos libres de derechos y de autoria propia ideal para tus proyectos de produccion musical.</p>
-
-                                
 
                             </div>
 
@@ -201,7 +177,6 @@
                     </div>
                </div>
      </section>
-
 
      <!-- sonidos -->
      <section class="class section" id="sonidos">
@@ -266,9 +241,6 @@
                </div>
      </section>
 
-
-    
-
      <!-- CONTACT -->
      <section class="contact section" id="contact">
           <div class="container">
@@ -306,16 +278,6 @@
                </div>
           </div>
      </section>
-
-
-     
-    
-
-                    
-
-
-                  
-
 
      <!-- FOOTER -->
      <footer class="site-footer">

@@ -12,7 +12,7 @@ $check_1 = array();
 $check_2 = array();
 
 // connect to the database
-//$db = mysqli_connect('localhost', 'root', '', 'latinfxsound-preinicio');
+$db = mysqli_connect('localhost', 'root', '', 'latinfxsound-preinicio');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
