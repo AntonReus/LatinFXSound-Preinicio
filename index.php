@@ -213,30 +213,20 @@
      <section class="class section" id="sonidos">
                <div class="container">
                     <div class="row">
-
                             <div class="col-lg-12 col-12 text-center mb-5">
                                 <h6 data-aos="fade-up"><?php echo $lang['Sound1']?></h6>
-
                                 <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Sound2']?></h2>
                              </div>
-
                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
                                 <div class="class-thumb">
                                     <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
-
                                     <div class="sound-info">
                                         <a href="../LatinFXSound-Preinicio-main/Paginas/AlbumCocina.php">
-                                        
                                             <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
-
                                             <span><strong><?php echo $lang['Sound4']?></span>
-
                                             <span class="sound-price"><?php echo $lang['Sound5']?></span>
-
                                             <p class="mt-3"><?php echo $lang['Sound6']?></p>
-
                                         </a>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -244,14 +234,10 @@
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
                                 <div class="class-thumb">
                                     <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
-
                                     <div class="class-info">
                                         <h3 class="mb-1"><?php echo $lang['Sound7']?></h3>
-
                                         <span><strong><?php echo $lang['Sound8']?></span>
-
                                         <span class="class-price"><?php echo $lang['Sound9']?></span>
-
                                         <p class="mt-3"><?php echo $lang['Sound10']?></p>
                                     </div>
                                 </div>
