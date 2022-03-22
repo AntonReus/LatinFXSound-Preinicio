@@ -47,6 +47,11 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link smoothScroll" key="Acerca"><?php echo $lang['Nav2']?></a>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="#sonidos" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                    </li>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
@@ -60,12 +65,12 @@
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
-                <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a href="#sonidos" class="fas fa-search" id="icon-search"> <?php echo $lang['Nav3']?></a>
-                    </li>
-                </ul>
                 </div>
+
+                 <div class="ctn-icon-search">
+                        <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                    </div>
+
         </div>
          <ul class="social-icon ml-lg-3">
                     <li>
@@ -225,14 +230,19 @@
                                 <div class="class-thumb">
                                     <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
 
-                                    <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+                                    <div class="sound-info">
+                                        <a href="../LatinFXSound-Preinicio-main/Paginas/AlbumCocina.php">
+                                        
+                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
 
-                                        <span><strong><?php echo $lang['Sound4']?></span>
+                                            <span><strong><?php echo $lang['Sound4']?></span>
 
-                                        <span class="class-price"><?php echo $lang['Sound5']?></span>
+                                            <span class="sound-price"><?php echo $lang['Sound5']?></span>
 
-                                        <p class="mt-3"><?php echo $lang['Sound6']?></p>
+                                            <p class="mt-3"><?php echo $lang['Sound6']?></p>
+
+                                        </a>
+                                        
                                     </div>
                                 </div>
                             </div>

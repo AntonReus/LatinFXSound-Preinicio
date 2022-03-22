@@ -70,6 +70,10 @@
         "trailer" => "Sonido de Trailer",
         "acelerar" => "Sonido de Acelerar",
         "pajaros" => "Sonido de Pajaros",
-        "" => "",
+        "AC1" => "Cascaron",
+        "AC2" => "Freir",
+        "AC3" => "Batir",
+        "AC4" => "Hervir",
+        "AC5" => "Microondas",
     )
 ?>
