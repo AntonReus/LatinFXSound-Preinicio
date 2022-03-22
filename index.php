@@ -43,19 +43,15 @@
                     <li class="nav-item">
                         <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#about" class="nav-link smoothScroll" key="Acerca"><?php echo $lang['Nav2']?></a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#sonidos" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#contact" class="nav-link smoothScroll"><?php echo $lang['Nav5']?></a>
                     </li>
@@ -65,19 +61,17 @@
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
-                </div>
-
-                 <div class="ctn-icon-search">
-                        <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
-                    </div>
-
-        </div>
-         <ul class="social-icon ml-lg-3">
-                    <li>
-                        <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                        <a href="index.php?lang=en"><?php echo $lang['en']?></a>
-                    </li>
+                <ul class="social-icon ml-lg-3">
+                    <li><a class="fas fa-search" id="icon-search"></a></li>
                 </ul>
+            </div>
+        </div>
+            <ul class="social-icon ml-lg-3">
+                <li>
+                    <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                    <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+                </li>
+            </ul>
     </nav>
 
     <div id="icon-menu">
