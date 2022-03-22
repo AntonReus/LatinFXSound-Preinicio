@@ -47,11 +47,6 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link smoothScroll" key="Acerca"><?php echo $lang['Nav2']?></a>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#sonidos" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
-                    </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
@@ -65,12 +60,12 @@
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#sonidos" class="fas fa-search" id="icon-search"> <?php echo $lang['Nav3']?></a>
+                    </li>
+                </ul>
                 </div>
-
-                 <div class="ctn-icon-search">
-                        <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
-                    </div>
-
         </div>
          <ul class="social-icon ml-lg-3">
                     <li>
