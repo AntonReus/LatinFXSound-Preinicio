@@ -30,6 +30,7 @@
         "About4" => "Sonidos originals",
         "About5" => "Calidad",
         "About5" => "Contenido de calidad",
+        "About6" => "Sonidos profesionalmete grabados",
         "Sound1" => "Los mejores sonidos",
         "Sound2" => "Los mas descargados",
         "Sound3" => "Sonido de Cocina",
@@ -65,7 +66,10 @@
         "InSes4" => "Continuar",
         "InSes5" => "¿Aun no te has registrado?",
         "InSes6" => "Registrate ahora mismo",
-        "" => "",
+        "huevo" => "Sonido de Huevo",
+        "trailer" => "Sonido de Trailer",
+        "acelerar" => "Sonido de Acelerar",
+        "pajaros" => "Sonido de Pajaros",
         "" => "",
     )
 ?>

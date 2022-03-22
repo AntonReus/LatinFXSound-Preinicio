@@ -22,10 +22,14 @@
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/blog.css">
 
 </head>
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-
+<header>
+    
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -61,15 +65,75 @@
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
-                <ul class="social-icon ml-lg-3">
+                </div>
+
+                 <div class="ctn-icon-search">
+                        <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                    </div>
+
+        </div>
+         <ul class="social-icon ml-lg-3">
                     <li>
                         <a href="index.php?lang=es"><?php echo $lang['es']?></a>
                         <a href="index.php?lang=en"><?php echo $lang['en']?></a>
                     </li>
                 </ul>
-            </div>
-        </div>
     </nav>
+
+    <div id="icon-menu">
+            <i class="fas fa-bars" style="white"></i>
+        </div>
+
+         <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+        <ul id="box-search">
+        <li>
+            <audio controls>
+                <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/huevo.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['huevo']?>
+            </a>
+        </li>
+
+         <li>
+            <audio controls>
+                <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/pajaros.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
+            </a>
+        </li>
+
+         <li>
+            <audio controls>
+                <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/trailer.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['trailer']?>
+            </a>
+        </li>
+
+         <li>
+            <audio controls>
+                <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/acelerar.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
+            </a>
+        </li>
+
+        
+    </ul>
+
+    <div id="cover-ctn-search"></div>  
+
+</header>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    
 
     <!-- HERO -->
     <section class="hero d-flex flex-column justify-content-center align-items-center">
@@ -82,14 +146,7 @@
                             <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Hero2']?></h1>
                             <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Hero3']?></a>
                             <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Hero4']?></a>
-                            <br><br><br><h4 class="text-white" data-aos="fade-up" data-aos-delay="600" align="rigth"><?php echo $lang['Hero5']?><br><br>
-                            <div>
-                                <img src="images/huevo.jpg" class="img-fluid" alt="Class" width="200" height="200">
-                                <audio controls>
-                                <source src="audios/huevo.mp3" type="audio/mp3">
-                                <?php echo $lang['Hero6']?>
-                                </audio>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -323,5 +380,6 @@
      <script src="js/own.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="js/jquery-3.6.0.min.js"></script>
+     <script src="js/script.js"></script>
 </body>
 </html>
