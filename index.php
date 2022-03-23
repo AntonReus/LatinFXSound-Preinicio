@@ -221,7 +221,7 @@
                                 <div class="class-thumb">
                                     <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
                                     <div class="sound-info">
-                                        <a href="../LatinFXSound-Preinicio-main/Paginas/AlbumCocina.php">
+                                        <a href="Paginas/AlbumCocina.php">
                                             <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
                                             <span><strong><?php echo $lang['Sound4']?></span>
                                             <span class="sound-price"><?php echo $lang['Sound5']?></span>
