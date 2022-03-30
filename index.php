@@ -43,15 +43,19 @@
                     <li class="nav-item">
                         <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#about" class="nav-link smoothScroll" key="Acerca"><?php echo $lang['Nav2']?></a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#sonidos" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#contact" class="nav-link smoothScroll"><?php echo $lang['Nav5']?></a>
                     </li>
@@ -61,17 +65,19 @@
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                 </ul>
-                <ul class="social-icon ml-lg-3">
-                    <li><a class="fas fa-search" id="icon-search"></a></li>
-                </ul>
-            </div>
+                </div>
+
+                 <div class="ctn-icon-search">
+                        <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                    </div>
+
         </div>
-            <ul class="social-icon ml-lg-3">
-                <li>
-                    <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                    <a href="index.php?lang=en"><?php echo $lang['en']?></a>
-                </li>
-            </ul>
+         <ul class="social-icon ml-lg-3">
+                    <li>
+                        <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                        <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+                    </li>
+                </ul>
     </nav>
 
     <div id="icon-menu">
@@ -161,15 +167,52 @@
                     <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><?php echo $lang['Ini11']?></a>
                 </div>
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
-                    <div class="about-working-hours">
-                        <div>
-                            <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Ini6']?></h2>
-                            <strong class="d-block" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Ini7']?></strong>
-                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Ini8']?></strong>
-                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Ini9']?></strong>
-                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Ini10']?></strong> 
-                        </div>
-                    </div>
+                   <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Suscripción","amount":{"currency_code":"USD","value":26.56,"breakdown":{"item_total":{"currency_code":"USD","value":13},"shipping":{"currency_code":"USD","value":12},"tax_total":{"currency_code":"USD","value":1.56}}}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
                 </div>
             </div>
         </div>
@@ -213,20 +256,30 @@
      <section class="class section" id="sonidos">
                <div class="container">
                     <div class="row">
+
                             <div class="col-lg-12 col-12 text-center mb-5">
                                 <h6 data-aos="fade-up"><?php echo $lang['Sound1']?></h6>
+
                                 <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Sound2']?></h2>
                              </div>
+
                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
                                 <div class="class-thumb">
                                     <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
+
                                     <div class="sound-info">
-                                        <a href="Paginas/AlbumCocina.php">
+                                        <a href="../LatinFXSound-Preinicio-main/Paginas/AlbumCocina.php">
+                                        
                                             <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+
                                             <span><strong><?php echo $lang['Sound4']?></span>
+
                                             <span class="sound-price"><?php echo $lang['Sound5']?></span>
+
                                             <p class="mt-3"><?php echo $lang['Sound6']?></p>
+
                                         </a>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -234,11 +287,20 @@
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
                                 <div class="class-thumb">
                                     <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
-                                    <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound7']?></h3>
-                                        <span><strong><?php echo $lang['Sound8']?></span>
-                                        <span class="class-price"><?php echo $lang['Sound9']?></span>
-                                        <p class="mt-3"><?php echo $lang['Sound10']?></p>
+
+                                    <div class="sound-info">
+                                        <a href="../LatinFXSound-Preinicio-main/Paginas/biblioteca.php">
+                                        
+                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+
+                                            <span><strong><?php echo $lang['Sound4']?></span>
+
+                                            <span class="sound-price"><?php echo $lang['Sound5']?></span>
+
+                                            <p class="mt-3"><?php echo $lang['Sound6']?></p>
+
+                                        </a>
+                                        
                                     </div>
                                 </div>
                             </div>
