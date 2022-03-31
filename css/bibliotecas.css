@@ -379,6 +379,20 @@ https://www.tooplate.com/view/2119-gymso-fitness
   }
 
   /*---------------------------------------
+     HERO2              
+  -----------------------------------------*/
+
+  .heroalt {
+    background-image: url('../images/music.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /*---------------------------------------
      REGISTRERIMG              
   -----------------------------------------*/
 
@@ -702,3 +716,4 @@ https://www.tooplate.com/view/2119-gymso-fitness
       display: block;
     }
   }
+}

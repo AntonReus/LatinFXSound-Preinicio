@@ -1,9 +1,9 @@
-<?php include('../config/connection.php') ?>
+<?php include('../language/config.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>LATINFXSOUND*** - Login</title>
+     <title>LATINFXSOUND*** - Recover</title>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -36,7 +36,7 @@
                         <input type="email" class="form-control" name="user_email" placeholder="Direccion email">
                     </div>
                     <div class="input-group">
-                        <button type="submit" class="form-control" id="login_user" name="">Continuar</button>
+                        <button type="submit" class="form-control" id="new_password" name="">Continuar</button>
                     </div>
                 </form>
             </div>

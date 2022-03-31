@@ -1,11 +1,10 @@
-<?php //include('config/connection.php') ?>
-<?php include"language/config.php" ?>
+<?php include ("language/config.php");?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 
-     <title>LATINFXSOUND***</title>
+     <title>Epic Sound FX</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -33,7 +32,7 @@
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">LATINFXSOUND***</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,39 +44,32 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll" key="Acerca"><?php echo $lang['Nav2']?></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#sonidos" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
 
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll"><?php echo $lang['Nav5']?></a>
-                    </li>
                 </ul>
+                --------------
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
+                    
                 </ul>
+                ------------
                 </div>
-
-                 <div class="ctn-icon-search">
-                        <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
-                    </div>
-
+                <div class="ctn-icon-search">
+                    <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                </div>
         </div>
          <ul class="social-icon ml-lg-3">
-                    <li>
-                        <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                        <a href="index.php?lang=en"><?php echo $lang['en']?></a>
-                    </li>
-                </ul>
+            <li>
+                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+            </li>
+        </ul>
     </nav>
 
     <div id="icon-menu">
@@ -132,9 +124,6 @@
 
 </header>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-
-    
-
     <!-- HERO -->
     <section class="hero d-flex flex-column justify-content-center align-items-center">
         <div class="bg-overlay"></div>
@@ -161,13 +150,10 @@
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
                     <h2 class="mb-3 text-white" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
                     <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini2']?></h6>
-                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini3']?></h6>
-                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini4']?></h6>
-                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini5']?></h6>
                     <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><?php echo $lang['Ini11']?></a>
                 </div>
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
-                   <div id="smart-button-container">
+                <div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
@@ -219,7 +205,7 @@
     </section>
 
      <!-- ABOUT -->
-     <section class="about section" id="about">
+    <!-- <section class="about section" id="about">
                <div class="container">
                     <div class="row">
                             <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
@@ -250,7 +236,7 @@
                             </div>
                     </div>
                </div>
-     </section>
+    </section> -->
 
      <!-- sonidos -->
      <section class="class section" id="sonidos">
@@ -261,72 +247,50 @@
                                 <h6 data-aos="fade-up"><?php echo $lang['Sound1']?></h6>
 
                                 <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Sound2']?></h2>
-                             </div>
-
-                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                                <div class="class-thumb">
-                                    <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="sound-info">
-                                        <a href="../LatinFXSound-Preinicio-main/Paginas/AlbumCocina.php">
-                                        
-                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
-
-                                            <span><strong><?php echo $lang['Sound4']?></span>
-
-                                            <span class="sound-price"><?php echo $lang['Sound5']?></span>
-
-                                            <p class="mt-3"><?php echo $lang['Sound6']?></p>
-
-                                        </a>
-                                        
-                                    </div>
-                                </div>
                             </div>
-
-                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-                                <div class="class-thumb">
-                                    <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="sound-info">
-                                        <a href="../LatinFXSound-Preinicio-main/Paginas/biblioteca.php">
-                                        
-                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
-
-                                            <span><strong><?php echo $lang['Sound4']?></span>
-
-                                            <span class="sound-price"><?php echo $lang['Sound5']?></span>
-
-                                            <p class="mt-3"><?php echo $lang['Sound6']?></p>
-
-                                        </a>
-                                        
+                            <ul>
+                                <li>
+                                <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="class-thumb">
+                                            <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
+                                            <div class="class-info">                                               
+                                                <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+                                                <p class="mt-3"><?php echo $lang['Sound6']?></p>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </li>
+                                <li>
+                                <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="class-thumb">
+                                            <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
+                                            <div class="class-info">
+                                                <a href="../LatinFXSound-Preinicio-main/Paginas/biblioteca.php">                                                
+                                                    <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+                                                    <p class="mt-3"><?php echo $lang['Sound6']?></p>
+                                                </a>                                                
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="class-thumb">
-                                    <img src="images/class/naturaleza.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound11']?></h3>
-
-                                        <span><strong><?php echo $lang['Sound12']?></span>
-
-                                        <span class="class-price"><?php echo $lang['Sound13']?></span>
-
-                                        <p class="mt-3"><?php echo $lang['Sound14']?></p>
+                                </li>
+                                <li>
+                                    <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                        <div class="class-thumb">
+                                            <img src="images/class/naturaleza.jpeg" class="img-fluid" alt="Class">
+                                            <div class="class-info">
+                                                <h3 class="mb-1"><?php echo $lang['Sound11']?></h3>
+                                                <p class="mt-3"><?php echo $lang['Sound14']?></p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
+                                </li>
+                            </ul>
                     </div>
                </div>
      </section>
 
      <!-- CONTACT -->
-     <section class="contact section" id="contact">
+     <!-- <section class="contact section" id="contact">
           <div class="container">
                <div class="row">
 
@@ -347,29 +311,29 @@
                     <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
                         <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Cont6']?></span></h2>
 
-                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i><?php echo $lang['Cont6']?></p>
+                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i><?php echo $lang['Cont6']?></p> -->
 <!-- How to change your own map point
     1. Ir a google map
     2. Click en la localidad del cliente
     3. Click en "compartir" y elegir "incorporar un mapa" tab
     4. Copiar solo la URL en el campo src="" 
 -->
-                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
+                        <!-- <div class="google-map" data-aos="fade-up" data-aos-delay="900">
                            <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                         </div>
                     </div>
                     
                </div>
           </div>
-     </section>
+     </section> -->
 
-     <!-- FOOTER -->
-     <footer class="site-footer">
-          <div class="container">
-               <div class="row">
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
 
                     <div class="ml-auto col-lg-4 col-md-5">
-                        <p class="copyright-text">Copyright &copy; 2020 LatinFXSound
+                        <p class="copyright-text">Copyright &copy; 2022 Epic Sound FX
                         
                         <br></i><?php echo $lang['Cont7']?>: <a href="https://www.empresa.com">Empresa</a></p>
                     </div>
@@ -383,9 +347,9 @@
                         <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
                     </div>
                     
-               </div>
-          </div>
-     </footer>
+            </div>
+        </div>
+    </footer>
 
     <!-- Iniciar sesion -->
     <div class="modal fade" id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
@@ -397,36 +361,37 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-            <div class="modal-body">
-            <form method="post" class="membership-form webform" role="form" action="">
-                    <?php include('web_services/errors.php'); ?>
-                    <div class="input-group">
-                        <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
-                    </div>
-                    <div class="input-group">
-                        <input type="password" class="form-control" name="user_password" placeholder="<?php echo $lang['InSes3']?>">
-                    </div>
-                    <div class="input-group">
-                        <button type="submit" class="form-control" id="login_user" name="login_user"><?php echo $lang['InSes4']?></button>
-                    </div>
-                    <br><p>
-                    <?php echo $lang['InSes5']?> <a href="web_services/registrer.php"><?php echo $lang['InSes6']?></a>
-                    </p>
-                </form>
-            </div>
+                <div>
+                    <a class="social-icon ml-lg-3" href="password_recovery/recover.php"><?php echo $lang['InSes7']?></a>
+                </div>
+                <div class="modal-body">
+                    <form method="post" class="membership-form webform" role="form" action="">
+                        <?php include('web_services/errors.php'); ?>
+                        <div class="input-group">
+                            <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" class="form-control" name="user_password" placeholder="<?php echo $lang['InSes3']?>">
+                        </div>
+                        <div class="input-group">
+                            <button type="submit" class="form-control" id="login_user" name="login_user"><?php echo $lang['InSes4']?></button>
+                        </div>
+                        <br><p><?php echo $lang['InSes5']?> <a href="web_services/registrer.php"><?php echo $lang['InSes6']?></a></p>
+                    </form>
+                </div>
             <div class="modal-footer"></div>
         </div>
     </div>
 
-     <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
-     <script src="js/own.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script src="js/jquery-3.6.0.min.js"></script>
-     <script src="js/script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/own.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
