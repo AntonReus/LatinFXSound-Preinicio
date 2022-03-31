@@ -1,4 +1,4 @@
-<?php include('../language/config.php') ?>
+<?php include('../language/recoverconf.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +77,7 @@
                             <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
                         </div>
                         <div class="input-group">
-                            <button type="submit" class="form-control" id="send_recover" name=""><?php echo $lang['Rec3']?></button>
+                            <button type="submit" class="form-control" id="send_recover" name="send_recover"><?php echo $lang['Rec3']?></button>
                         </div>
                     </form>
                 </div>

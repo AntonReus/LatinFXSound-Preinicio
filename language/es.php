@@ -58,6 +58,11 @@
         "Rec1" => "Recuperacion de Contraseña",
         "Rec2" => "Introduce tu direccion de correo electronico",
         "Rec3" => "Continuar",
+        "Rec4" => "Recuperacion de contraseña",
+        "Rec5" => "Introduce tu nueva contraseña",
         "Texto1" => "Acceso no autorizado, inicia sesion o registrate",
+        "Pending1" => "Enviamos un correo electrónico a:",
+        "Pending2" => "para ayudarte a recuperar tu cuenta",
+        "Pending3" => "Inicie sesión en su cuenta de correo electrónico y haga clic en el enlace que le enviamos para restablecer su contraseña",
     )
 ?>
