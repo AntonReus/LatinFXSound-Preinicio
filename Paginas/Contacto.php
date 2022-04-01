@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
+                        <a href="../login.php" class="nav-link smoothScroll"><?php echo $lang['Nav4']?></a>
                     </li>
                 </ul>
                 --------------
@@ -67,8 +67,8 @@
         </div>
          <ul class="social-icon ml-lg-3">
             <li>
-                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="Contacto.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="Contacto.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>

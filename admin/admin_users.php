@@ -37,7 +37,7 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" href="../css/blog.css">
 </head>
 
-<body>
+<header>
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -49,14 +49,14 @@ if (isset($_GET['logout'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="../index.ph" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="../index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
                     <li class="nav-item">
                         <a href="../Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
                     <li class="nav-item">
                         <?php  if (isset($_SESSION['user'])) : ?>
-                            <a href="../index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion">logout</a>
+                            <a href="../index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion">Cerrar Sesión</a>
                         <?php endif ?>
                     </li>
                 </ul>
@@ -64,11 +64,44 @@ if (isset($_GET['logout'])) {
         </div>
         <ul class="social-icon ml-lg-3">
             <li>
-                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="admin_users.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="admin_users.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>
+</header>
+<body>
+    <section class="hero d-flex flex-column justify-content-center align-items-center">
+        <div class="bg-overlay"></div>
+        <div class="modal-content modal-dialog">
+            <div class="modal-header" ass="modal-title" id="membershipFormLabel"><h2><?php echo $lang['Reg2']?></h2>
+                <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="../index.php">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <form class="registrer_form" id="registrer_form" role="form" method="post" action="">
+                    <?php include('../web_services/errors.php'); ?>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="user_email" name="user_email" placeholder="<?php echo $lang['Reg3']?>">
+                        <span id="email_error"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="user_password_1" name="user_password_1" placeholder="<?php echo $lang['Reg4']?>">
+                        <span id="password_error" class="ch_error"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="user_password_2" name="user_password_2" placeholder="<?php echo $lang['Reg5']?>">
+                        <span id="password_error" class="ch_error"></span>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="form-control" name="reg_user" href="index.php"><?php echo $lang['Reg1']?></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
 
     <div class="content">
     </div>

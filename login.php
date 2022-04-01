@@ -118,9 +118,6 @@
             <div  id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="membershipFormLabel"><?php echo $lang['Texto1']?></h3>
-                        </div>
                         <br>
                         <div class="modal-header">
                             <h2 class="modal-title" id="membershipFormLabel"><?php echo $lang['InSes1']?></h2>
@@ -129,7 +126,7 @@
                             </a>
                         </div>
                         <div>
-                            <a class="social-icon ml-lg-3" href="../password_recovery/recover.php"><?php echo $lang['InSes7']?></a>
+                            <a class="social-icon ml-lg-3" href="password_recovery/recover.php"><?php echo $lang['InSes7']?></a>
                         </div>
                         <div class="modal-body">
                             <form method="post" class="membership-form webform" role="form" action="">
@@ -144,7 +141,7 @@
                                     <button type="submit" class="form-control" id="login_user" name="login_user"><?php echo $lang['InSes4']?></button>
                                 </div>
                                 <br><p>
-                                <?php echo $lang['InSes5']?> <a href="registrer.php"><?php echo $lang['InSes6']?></a>
+                                <?php echo $lang['InSes5']?> <a href="web_services/registrer.php"><?php echo $lang['InSes6']?></a>
                                 </p>
                             </form>
                         </div>

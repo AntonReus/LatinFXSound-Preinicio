@@ -41,15 +41,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="../index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
-
                     <li class="nav-item">
                         <a href="../Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
-
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
+                        <a href="../admin/admin_users.php" class="nav-link smoothScroll"><?php echo $lang['Nav6']?></a>
                     </li>
                 </ul>
                 --------------
@@ -67,8 +65,8 @@
         </div>
          <ul class="social-icon ml-lg-3">
             <li>
-                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="AlbumCocina.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="AlbumCocina.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>

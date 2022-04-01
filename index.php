@@ -31,7 +31,7 @@
     
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container ">
             <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,14 +39,6 @@
             </button></div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
-                    </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
@@ -129,9 +121,9 @@
     <div id="cover-ctn-search"></div>  
 
 </header>
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50" class="marginnav">
     <!-- HERO -->
-    <section class="hero d-flex flex-column justify-content-center align-items-center">
+    <section class="hero d-flex flex-column justify-content-center align-items-center marginnav">
         <div class="bg-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -151,7 +143,7 @@
 
     <!--  Inicio de session  -->
      <section class="feature" id="feature">
-        <div class="container">
+        <div class="container marginnav">
             <div class="row">
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
                     <h2 class="mb-3 text-white" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
