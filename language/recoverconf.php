@@ -1,6 +1,6 @@
 <?php
     session_start();
-if (!isset($_SESSION['lang']))
+    if (!isset($_SESSION['lang']))
 	$_SESSION['lang'] = "es";
 else if (isset($_GET['lang'])        && $_SESSION['lang'] != $_GET['lang'] && !empty($_GET['lang']))
 {
@@ -51,35 +51,35 @@ if (isset($_POST['send_recover'])) {
         // Send email to user with the token in a link they can click on
         $to = $email;
         $subject = "Reset your password on epicsoundfx.com";
-        $msg = "Hi there, click on this link to reset your password: http://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=$token";
+        $msg = "Hi there, click on this link to reset your password: http://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=".$token;
         $msg = wordwrap($msg,70);
         $headers = "From: tonitovlog@gmail.com";
         mail($to, $subject, $msg, $headers);
         header('location: ../pending.php?email=' . $email);
     }
 }
+// ENTER A NEW PASSWORD
 if (isset($_POST['new_password'])) {
-    $password_1 = mysqli_real_escape_string($db, $_POST['user_password_1']);
-    $password_2 = mysqli_real_escape_string($db, $_POST['user_password_2']);
-    
-    //$token = mysqli_real_escape_string($db, $_SESSION['token']);
-
+    $new_pass = mysqli_real_escape_string($db, $_POST['new_pass']);
+    $new_pass_c = mysqli_real_escape_string($db, $_POST['new_pass_c']);
+  
     // Grab to token that came from the email link
-    $token = $_GET['token'];
-    if (empty($password_1) || empty($password_2)) array_push($errors, "Password is required");
-    if ($password_1 !== $password_2) array_push($errors, "Password do not match");
+    $token = $_SESSION['token'];
+    if (empty($new_pass) || empty($new_pass_c)) array_push($errors, "Password is required");
+    if ($new_pass !== $new_pass_c) array_push($errors, "Password do not match");
     if (count($errors) == 0) {
-        // select email address of user from the password_reset table 
-        $sql = "SELECT email FROM password_resets WHERE token='$token' LIMIT 1";
+      // select email address of user from the password_reset table 
+      $sql = "SELECT email FROM password_reset WHERE token='$token' LIMIT 1";
+      $results = mysqli_query($db, $sql);
+      $email = mysqli_fetch_assoc($results)['email'];
+  
+      if ($email) {
+        $new_pass = md5($new_pass);
+        $sql = "UPDATE users SET password='$new_pass' WHERE email='$email'";
         $results = mysqli_query($db, $sql);
-        $email = mysqli_fetch_assoc($results)['email'];
-
-        if ($email) {
-            $password_1 = md5($password_1);
-            $sql = "UPDATE users SET password='$password_1' WHERE email='$email'";
-            $results = mysqli_query($db, $sql);
-            header('location: index.php');
-        }
+        header('location: index.php');
+      }
     }
-}
+  }
+
 ?>

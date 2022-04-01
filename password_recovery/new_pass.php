@@ -1,4 +1,4 @@
-<?php include ("../language/recoverconf.php");?>
+<?php include ("../language/config.php");?>
 
 <!DOCTYPE html>
 <html lang="en">
