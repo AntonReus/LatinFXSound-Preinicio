@@ -86,7 +86,7 @@ if(isset($_POST['reg_user']))
                     $_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
                     $_SESSION['success']  = "You are now logged in";
                     //Href to biblioteca
-                    header("Location: ../biblioteca.php");
+                    header("Location: ../Paginas/biblioteca.php");
                 }
             }
         }

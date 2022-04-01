@@ -71,6 +71,7 @@
         "Cont4" => "Enter your message here",
         "Cont5" => "Send",
         "Cont6" => "Company address", 
+        "Nav7" => "Log Out",
         "" => "",
         "" => "",
         "" => "",

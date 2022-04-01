@@ -1,5 +1,15 @@
 <?php// include('../config/connection.php') ?>
-<?php include"../language/config.php" ?>
+<?php include"../language/config.php";
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: ../login.php');
+}
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: ../login.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,15 +59,16 @@
                     <li class="nav-item">
                         <a href="../admin/admin_users.php" class="nav-link smoothScroll"><?php echo $lang['Nav6']?></a>
                     </li>
+                    <li class="nav-item">
+                        <a href="../index.php?logout='1'" class="nav-link smoothScroll" style="color: //red;"><?php echo $lang['Nav7']?></a>
+                    </li>
                 </ul>
-                --------------
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                     
-                </ul>
-                ------------
+                </ul>-----
                 </div>
                 <div class="ctn-icon-search">
                     <a href="#sonidos" class="fas fa-search" id="icon-search"></a>

@@ -71,5 +71,6 @@
         "Cont4" => "Ingrese aqui su mensaje",
         "Cont5" => "Enviar",
         "Cont6" => "Direccion de la empresa",
+        "Nav7" => "Cerrar Sesión",
     )
 ?>
