@@ -127,78 +127,43 @@
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
 
-<!-- Albums -->
-      <section class="class section" id="class">
-               <div class="container">
-                    <div class="row">
+    <!-- CONTACT -->
+     <section class="contact section" id="contact">
+          <div class="container">
+               <div class="row">
 
-                            <div class="col-lg-12 col-12 text-center mb-5">
-                                <h6 data-aos="fade-up">Miles de albumes libres de derecho</h6>
+                    <div class="ml-auto col-lg-5 col-md-6 col-12">
+                        <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Cont1']?></h2>
 
-                                <h2 data-aos="fade-up" data-aos-delay="200">Los mas escuchados</h2>
-                             </div>
+                        <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
+                            <input type="text" class="form-control" name="cf-name" placeholder="<?php echo $lang['Cont2']?>">
 
-                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                                <div class="class-thumb">
-                                    <img src="../images/class/cocinando.jpeg" class="img-fluid" alt="Class">
+                            <input type="email" class="form-control" name="cf-email" placeholder="<?php echo $lang['Cont3']?>">
 
-                                    <div class="class-info">
-                                        <a href="../Paginas/AlbumCocina.php">
-                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
-                                        </a>
-                                        
+                            <textarea class="form-control" rows="5" name="cf-message" placeholder="<?php echo $lang['Cont4']?>"></textarea>
 
-                                        
-
-                                        <p class="mt-3"><?php echo $lang['Sound6']?></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-                                <div class="class-thumb">
-                                    <img src="../images/class/transportes.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound7']?></h3>
-
-                                        
-
-                                        
-
-                                        <p class="mt-3"><?php echo $lang['Sound10']?></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="class-thumb">
-                                    <img src="../images/class/natural.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound11']?></h3>
-
-                                        
-
-                                        
-
-                                        <p class="mt-3"><?php echo $lang['Sound14']?></p>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <button type="submit" class="form-control" id="submit-button" name="submit"><?php echo $lang['Cont5']?></button>
+                        </form>
                     </div>
-               </div>
-     </section>
+               
+                    <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
+                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Cont6']?></span></h2>
 
-    
-     <section class="feature" id="feature">
-        <div class="container">
-            <div class="row">
-                <a href="#" class="btn custom-btn bg-color mt-3"  data-aos-delay="300" data-toggle="modal" data-target="#membershipForm">Añadir Album</a>
-            </div>
-        </div>
-</section>
+                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i><?php echo $lang['Cont6']?></p>
+<!-- How to change your own map point
+    1. Ir a google map
+    2. Click en la localidad del cliente
+    3. Click en "compartir" y elegir "incorporar un mapa" tab
+    4. Copiar solo la URL en el campo src="" 
+-->
+                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
+                           <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
 
     <!-- SCRIPTS -->
     <script src="../js/jquery.min.js"></script>

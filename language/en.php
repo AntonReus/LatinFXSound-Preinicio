@@ -54,6 +54,7 @@
         "AC3" => "Batir",
         "AC4" => "Hervir",
         "AC5" => "Microondas",
+        "AC" => "Kitchen Album",
         "Title3" => "Password recovery",
         "Rec1" => "Password recovery",
         "Rec2" => "Enter your email address",
