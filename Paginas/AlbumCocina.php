@@ -1,15 +1,5 @@
 <?php// include('../config/connection.php') ?>
-<?php include"../language/config.php";
-if (!isLoggedIn()) {
-	$_SESSION['msg'] = "You must log in first";
-	header('location: ../login.php');
-}
-if (isset($_GET['logout'])) {
-	session_destroy();
-	unset($_SESSION['user']);
-	header("location: ../login.php");
-}
-?>
+<?php include"../language/config.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +21,7 @@ if (isset($_GET['logout'])) {
      <!--Multilanguage-->
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="../css/bibliotecas.css">
+     <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/principal.css">
@@ -42,6 +32,14 @@ if (isset($_GET['logout'])) {
     
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
+         <div class="row">
+                <div class="col text-center">
+                    <label id="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         <div class="container">
             <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -51,24 +49,25 @@ if (isset($_GET['logout'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="../index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
+
                     <li class="nav-item">
                         <a href="../Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
+
                     <li class="nav-item">
-                        <a href="../admin/admin_users.php" class="nav-link smoothScroll"><?php echo $lang['Nav6']?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.php?logout='1'" class="nav-link smoothScroll" style="color: //red;"><?php echo $lang['Nav7']?></a>
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
                 </ul>
+                --------------
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                     
-                </ul>-----
+                </ul>
+                ------------
                 </div>
                 <div class="ctn-icon-search">
                     <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
@@ -76,8 +75,8 @@ if (isset($_GET['logout'])) {
         </div>
          <ul class="social-icon ml-lg-3">
             <li>
-                <a href="AlbumCocina.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="AlbumCocina.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>
@@ -268,5 +267,6 @@ if (isset($_GET['logout'])) {
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="../js/jquery-3.6.0.min.js"></script>
      <script src="../js/script.js"></script>
+     <script src="../js/mode.js"></script>
 </body>
 </html>

@@ -28,10 +28,18 @@
 
 </head>
 <header>
-    
+     
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container ">
+        <div class="row">
+                <div class="col text-center">
+                    <label id="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        <div class="container">
             <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -39,6 +47,14 @@
             </button></div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                    </li>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
@@ -121,10 +137,10 @@
     <div id="cover-ctn-search"></div>  
 
 </header>
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50" class="marginnav">
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
     <!-- HERO -->
-    <section class="hero d-flex flex-column justify-content-center align-items-center marginnav">
-        <div class="bg-overlay"></div>
+    <section class="hero d-flex flex-column justify-content-center align-items-center">
+        <div ></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto col-12">
@@ -142,12 +158,12 @@
     </section>
 
     <!--  Inicio de session  -->
-     <section class="feature" id="feature">
-        <div class="container marginnav">
+     <section class="feature" id="feature" style="">
+        <div class="container">
             <div class="row">
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
-                    <h2 class="mb-3 text-white" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
-                    <h6 class="mb-4 text-white" data-aos="fade-up"><?php echo $lang['Ini2']?></h6>
+                    <h2 class="hero3" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
+                    <h6 class="hero3" data-aos="fade-up"><?php echo $lang['Ini2']?></h6>
                     <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><?php echo $lang['Ini11']?></a>
                 </div>
 
@@ -245,11 +261,11 @@
     </section> -->
 
      <!-- Albums -->
-      <section class="class section" id="class">
+      <section class="class section hero4" id="class" style="">
                <div class="container">
                     <div class="row">
 
-                            <div class="col-lg-12 col-12 text-center mb-5">
+                            <div class="hero3 col-lg-12 col-12 text-center mb-5">
                                 <h6 data-aos="fade-up">Miles de albumes libres de derecho</h6>
 
                                 <h2 data-aos="fade-up" data-aos-delay="200">Los mas escuchados</h2>
@@ -348,7 +364,7 @@
      </section> -->
 
     <!-- FOOTER -->
-    <footer class="site-footer">
+    <footer style="" class="hero4 site-footer">
         <div class="container">
             <div class="row">
 
@@ -413,5 +429,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/mode.js"></script>
+   
 </body>
 </html>

@@ -21,7 +21,7 @@
      <!--Multilanguage-->
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="../css/bibliotecas.css">
+     <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../css/principal.css">
@@ -32,6 +32,14 @@
     
     <!-- MENU BAR -->
      <nav class="navbar navbar-expand-lg fixed-top">
+         <div class="row">
+                <div class="col text-center">
+                    <label id="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         <div class="container">
             <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -49,7 +57,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="../login.php" class="nav-link smoothScroll"><?php echo $lang['Nav4']?></a>
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
                     </li>
                 </ul>
                 --------------
@@ -67,8 +75,8 @@
         </div>
          <ul class="social-icon ml-lg-3">
             <li>
-                <a href="Contacto.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="Contacto.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>
@@ -175,5 +183,6 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="../js/jquery-3.6.0.min.js"></script>
      <script src="../js/script.js"></script>
+     <script src="../js/mode.js"></script>
 </body>
 </html>
