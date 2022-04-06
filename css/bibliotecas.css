@@ -383,8 +383,8 @@ https://www.tooplate.com/view/2119-gymso-fitness
      HERO2              
   -----------------------------------------*/
 
-  .heroalt::before {
-    background-image: url('../images/music.jpg');
+  .forms{
+    background-image: url('../images/back/1.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

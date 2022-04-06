@@ -112,7 +112,7 @@
 </header>
 <body>
 <!-- Iniciar sesion -->
-<section class="heroalt d-flex flex-column justify-content-center align-items-center">
+<section class="forms d-flex flex-column justify-content-center align-items-center">
     <div class="bg-overlay"></div>
         <div class="" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
             <div  id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">

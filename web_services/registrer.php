@@ -30,7 +30,7 @@
 <header>
 <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div><a class="navbar-brand" href="../index.php">LATINFXSOUND***</a></div>
+            <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
     </nav>
 </header>
 <body>
-    <section class="heroalt d-flex flex-column justify-content-center align-items-center">
+    <section class="forms d-flex flex-column justify-content-center align-items-center">
         <div class="bg-overlay"></div>
         <div class="modal-content modal-dialog">
             <div class="modal-header" ass="modal-title" id="membershipFormLabel"><h2><?php echo $lang['Reg2']?></h2>

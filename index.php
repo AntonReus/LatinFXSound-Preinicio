@@ -149,7 +149,6 @@
                             <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Hero2']?></h1>
                             <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Hero3']?></a>
                             <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Hero4']?></a>
-                           
                         </div>
                     </div>
                 </div>
@@ -157,7 +156,7 @@
         </div>
     </section>
 
-    <!--  Inicio de session  -->
+    <!--  Pagos  -->
      <section class="feature" id="feature" style="">
         <div class="container">
             <div class="row">
@@ -216,12 +215,9 @@
                                     }
                                     initPayPalButton();
                                 </script>
-                               
                         </div>
                     </div>
-                </div>
-
-                    
+                </div>  
             </div>
         </div>
     </section>

@@ -1,5 +1,6 @@
 <?php 
 include ("../language/config.php");
+//include ("../conexion/db.php");
 if (!isAdmin()) {
 	$_SESSION['msg'] = "You must log in first";
 	header('location: ../login.php');
@@ -26,6 +27,7 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/aos.css">
+     <link rel="stylesheet" href="../css/bibliotecas.css">
 
     <!--Multilanguage-->
 
@@ -71,7 +73,7 @@ if (isset($_GET['logout'])) {
     </nav>
 </header>
 <body>
-    <section class="hero d-flex flex-column justify-content-center align-items-center">
+    <section class="forms d-flex flex-column justify-content-center align-items-center">
         <div class="bg-overlay"></div>
         <div class="modal-content modal-dialog">
             <div class="modal-header" ass="modal-title" id="membershipFormLabel"><h2><?php echo $lang['Reg2']?></h2>
@@ -95,7 +97,7 @@ if (isset($_GET['logout'])) {
                         <span id="password_error" class="ch_error"></span>
                     </div>
                     <div class="input-group">
-                        <button type="submit" class="form-control" name="reg_user" href="index.php"><?php echo $lang['Reg1']?></button>
+                        <button type="submit" class="form-control" name="reg_admin" id="reg_admin" href="index.php"><?php echo $lang['Reg1']?></button>
                     </div>
                 </form>
             </div>

@@ -394,7 +394,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
      HERO2              
   -----------------------------------------*/
 
-  .heroalt::before {
+  .forms::before {
     background-image: url('../images/music.jpg');
     background-size: cover;
     background-position: top;

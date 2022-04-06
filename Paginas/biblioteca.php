@@ -1,5 +1,6 @@
 <?php// include('../config/connection.php') ?>
-<?php include"../language/config.php" ?>
+<?php include"../language/config.php";
+//include ('../conexion/db.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
