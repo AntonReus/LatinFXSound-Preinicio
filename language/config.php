@@ -149,61 +149,44 @@ if(isset($_POST['login_user']))
   Accept email of user whose password is to be reset
   Send email to user to reset their password
 */
-if (isset($_POST['send_recover'])) {
-    $email = mysqli_real_escape_string($conn, $_POST['user_email']);
-    // ensure that the user exists on our system
-    $query = "SELECT email FROM users WHERE email='$email'";
-    $results = mysqli_query($conn, $query);
-
+if(isset($_POST['send_recover'])){
+    $email=$_REQUEST['user_email'];
+    $query = "select * from  users where (email = '$email')"; 
+    $res = mysqli_query($conn,$query);
+    $result=mysqli_fetch_array($res);
     if (empty($email)) {
         array_push($errors, "Your email is required");
     }
-    else if(mysqli_num_rows($results) <= 0)
+    if(count($errors) == 0)
     {
-        array_push($errors, "Sorry, no user exists on our system with that email");
-    }
-    // generate a unique random token of length 100
-    $token = bin2hex(random_bytes(50));
-
-    if (count($errors) == 0)
-    {
-        // store token in the password-reset database table against the user's email
-        $sql = "INSERT INTO password_resets(email, token) VALUES ('$email', '$token')";
-        $results = mysqli_query($conn, $sql);
-
-        // Send email to user with the token in a link they can click on
-        $to = $email;
-        $subject = "Reset your password on epicsoundfx.com";
-        //$msg = "Hi there, click on this link to reset your password: http://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=".$token;
-        $msg = "Hola $email\nPara cambiar tu contraseña por favor accede al siguiente link:\nhttp://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=$token\nSi no eres tu por favor ignora este mensaje.";
-        $msg = wordwrap($msg,70);
-        $headers = "From: tonitovlog@gmail.com";
-        mail($to, $subject, $msg, $headers);
-        header('location: ../pending.php?email=' . $email);
-    }
-}
-
-// ENTER A NEW PASSWORD
-if (isset($_POST['new_password'])) {
-    $password_1 = mysqli_real_escape_string($conn, $_POST['user_password_1']);
-    $password_2 = mysqli_real_escape_string($conn, $_POST['user_password_2']);
-  
-    // Grab to token that came from the email link
-    $token = $_SESSION['token'];
-    if (empty($password_1) || empty($password_2)) array_push($errors, "Password is required");
-    if ($password_1 !== $password_2) array_push($errors, "Password do not match");
-    if (count($errors) == 0) {
-        // select email address of user from the password_reset table 
-        $sql = "SELECT email FROM password_resets WHERE token='$token' LIMIT 1";
-        $results = mysqli_query($conn, $sql);
-        $email = mysqli_fetch_assoc($results)['email'];
-    
-        if ($email) {
-            $password_1 = md5($password_1);
-            $sql = "UPDATE users SET password='$password_1' WHERE email='$email'";
-            $results = mysqli_query($conn, $sql);
-            header('location: ../index.php');
+        $findresult = mysqli_query($conn, "SELECT * FROM users WHERE (email = '$email')");
+        if($res = mysqli_fetch_array($findresult))
+        {
+            $oldftemail = $res['email'];  
         }
+        $token = bin2hex(random_bytes(50));
+        $inresult = mysqli_query($conn,"insert into password_resets values('','$oldftemail','$token')"); 
+        if ($inresult)  
+        {
+            $FromName="Epic Sound FX";
+            $FromEmail="epicsoundfxprogramacion@gmail.com";
+            $ReplyTo="epicsoundfxprogramacion@gmail.com";
+            $credits="All rights are reserved | Epic Sound FX "; 
+            $headers  = "MIME-Version: 1.0\n";
+            $headers .= "Content-type: text/html; charset=iso-8859-1\n";
+            $headers .= "From: ".$FromName." <".$FromEmail.">\n";
+            $headers .= "Reply-To: ".$ReplyTo."\n";
+            $headers .= "X-Sender: <".$FromEmail.">\n";
+            $headers .= "X-Mailer: PHP\n"; 
+            $headers .= "X-Priority: 1\n"; 
+            $headers .= "Return-Path: <".$FromEmail.">\n"; 
+            $subject="Restauración de contraseña"; 
+            $msg="Hola $oldftemail<br>Para cambiar tu contraseña por favor accede al siguiente link:<br>http://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=".$token."<br>Si no eres tu por favor ignora este mensaje.<br><center>".$credits."</center>"; 
+            if(@mail($oldftemail, $subject, $msg, $headers,'-f'.$FromEmail) ){
+                header("location:../pending.php?sent=1");
+                $hide='1';
+            }
+        }   
     }
 }
 

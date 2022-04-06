@@ -62,7 +62,7 @@
         "Rec4" => "Recuperación de contraseña",
         "Rec5" => "Introduce tu nueva contraseña",
         "Texto1" => "Acceso no autorizado, iniciar sesión o registrarse",
-        "Pending1" => "Enviamos un correo electrónico a:",
+        "Pending1" => "Enviamos un correo electrónico",
         "Pending2" => "para ayudarte a recuperar tu cuenta",
         "Pending3" => "Inicie sesión en su cuenta de correo electrónico y haga clic en el enlace que le enviamos para restablecer su contraseña",
         "Cont1" => "Sugerencias",

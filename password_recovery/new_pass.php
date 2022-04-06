@@ -31,9 +31,68 @@
                             <span aria-hidden="true">&times;</span>
                         </a>
                     </div>
+                    <?php
+                        if(isset($_GET['token']))
+                        {
+                        $token= $_GET['token'];
+                        }
+                        //form for submit 
+                        if(isset($_POST['new_password'])){
+                            extract($_POST);
+                            $user_password_1 = "";
+                            $user_password_2 = "";
+                            $user_password_1 = mysqli_real_escape_string($conn, $_POST['user_password_1']);
+                            $user_password_2 = mysqli_real_escape_string($conn, $_POST['user_password_2']);
+                        if($user_password_1 ==''){
+                            $error[] = 'Please enter the password.';
+                        }
+                        if($user_password_2 ==''){
+                            $error[] = 'Please confirm the confirm password.';
+                        }
+                        if($user_password_1 != $user_password_2){
+                            $error[] = 'Passwords do not match.';
+                        }
+                        if(strlen($user_password_1)>50){ // Max 
+                        $error[] = 'Password: Max length 50 Characters Not allowed';
+                        }
+                        $fetchresultok = mysqli_query($conn, "SELECT email FROM password_resets WHERE token='$token'");
+                        if($res = mysqli_fetch_array($fetchresultok))
+                        {
+                            $email= $res['email']; 
+                        }
+                        if(isset($email) != '' ) {
+                            $emailtok=$email;
+                        }
+                        else
+                        {
+                            $error[] = 'Link has been expired or something missing ';
+                            $hide=1;
+                        }
+                        if(!isset($error)){
+                            $options = array("cost"=>4);
+                            $user_password_1 = md5($user_password_1);
+                            $resultresetpass= mysqli_query($conn, "UPDATE users SET password='$user_password_1' WHERE (email='$emailtok' OR email='$email')"); 
+                            if($resultresetpass) 
+                            { 
+                                $success="<div class='error'><br>Tu contraseña ha sido cambiada<br><a href='../index.php'>Inicia Sesión</a></div><br>";
+                                $resultdel = mysqli_query($conn, "DELETE FROM password_resets WHERE token='$token'");
+                                $hide=1;
+                            }
+                        }
+                    }
+                    ?>
                 <div class="modal-body">
                     <form method="post" class="membership-form webform" role="form" action="new_pass.php">
-                        <?php include('../web_services/errors.php'); ?>
+                        <?php //include('../web_services/errors.php');
+                            if(isset($error)){
+                              foreach($error as $error){
+                                echo '<div class="error">'.$error.'</div><br>';
+                              }
+                            }
+                            if(isset($success)){
+                              echo $success;
+                            }
+                        ?>
                         <?php echo $lang['Rec5']?>
                         <div class="input-group">
                             <label></label>

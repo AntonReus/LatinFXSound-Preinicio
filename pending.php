@@ -122,7 +122,6 @@
                     <div class="col-lg-8 col-md-10 mx-auto col-12">
                         <div class="hero-text mt-5 text-center">
                             <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Pending1']?></h1>
-							<h2 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $_GET['email']?></h2>
 							<h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Pending2']?></h1>
                             <br><br>
 							<h3 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Pending3']?></a></h3>

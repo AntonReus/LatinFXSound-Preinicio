@@ -62,7 +62,7 @@
         "Rec4" => "Password recovery",
         "Rec5" => "Enter your new password",
         "Texto1" => "Unauthorized access, log in or register",
-        "Pending1" => "We sent an email to:",
+        "Pending1" => "We sent an email",
         "Pending2" => "to help you recover your account",
         "Pending3" => "Please login into your email account and click on the link we sent to reset your password",
         "Cont1" => "Suggestions",
