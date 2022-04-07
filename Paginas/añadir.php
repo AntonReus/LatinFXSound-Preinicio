@@ -2,7 +2,7 @@
 include('../language/config.php');// conexion a la bd
 //$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla
 
-if(isset($_POST['insertar']))//si apretamos el boton..
+if(isset($_POST['insert']))//si apretamos el boton..
 {
     $nombre=$_POST['nombre_sonido'];
     $cargarSonido=($_FILES['sonido']['tmp_name']);//carga el archivo
