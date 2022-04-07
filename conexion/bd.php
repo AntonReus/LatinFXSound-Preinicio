@@ -1,16 +1,20 @@
 <?php
 function conectar(){
-		$servername = "sql.freedb.tech";
-		$username = "freedb_IVEGAL";
-		$password = "gCjrgwfW7&@Nyr4";
-		$namedb = "freedb_latinfxsound-preinicio";
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $namedb);
-
-		if ($conn->connect_error) {
-  		die("Connection failed: " . $conn->connect_error);
-		}
-		return $conn;
-	}
+	$servername = "localhost";
+$database = "latinfxsound-preinicio";
+$username = "root";
+$password = "root";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+mysqli_close($conn);
+}
 ?>
+
+
+

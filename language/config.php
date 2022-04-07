@@ -25,7 +25,7 @@ $password = "";
 $user_id = "";
 
 // connect to the database local -- Coment in case of work whit Ivan
-$conn = mysqli_connect('localhost', 'root', '', 'latinfxsound-preinicio');
+$conn = mysqli_connect('localhost', 'root', 'root', 'latinfxsound-preinicio');
 
 //***************Register */
 if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
@@ -63,7 +63,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
     if (count($errors) == 0) {
         if (isset($_POST['reg_admin'])) {
             $user_type = "admin";
-            $query = "INSERT INTO users (email, password, user_type) 
+            $query = "INSERT INTO userss (email, password, user_type) 
                     VALUES('$email', '$password_1', '$user_type')";
             mysqli_query($conn, $query);
             $_SESSION['success'] = "";
@@ -73,7 +73,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
         else if (isset($_POST['reg_user'])) {
             if ($check_1 && $check_2) {
                 $user_type = "user";
-                $query = "INSERT INTO users (email, password, user_type) 
+                $query = "INSERT INTO userss (email, password, user_type) 
                         VALUES('$email', '$password_1', '$user_type')";
                 mysqli_query($conn, $query);
     

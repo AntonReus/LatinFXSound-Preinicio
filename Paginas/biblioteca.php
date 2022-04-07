@@ -1,6 +1,6 @@
 <?php// include('../config/connection.php') ?>
-<?php include"../language/config.php";
-//include ('../conexion/db.php');?>
+<?php include"../language/config.php";?>
+<?php include"../conexion/bd.php";?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -204,7 +204,7 @@
      <section class="feature" id="feature">
         <div class="container">
             <div class="row">
-                <a href="#" class="btn custom-btn bg-color mt-3"  data-aos-delay="300" data-toggle="modal" data-target="#membershipForm">Añadir Album</a>
+                <a href="../Paginas/añadir.php" class="btn custom-btn bg-color mt-3"  data-aos-delay="300" data-toggle="modal" data-target="">Añadir Album</a>
             </div>
         </div>
 </section>
