@@ -64,8 +64,122 @@ if(isset($_POST['insert']))//si apretamos el boton..
 
 </head>    
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50" class="">
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="row">
+                <div class="col text-center">
+                    <label id="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        <div class="container">
+            <div><a class="navbar-brand" href="index.php">Epic<img src="../images/back/lo.png" width="150" height="115">Sound</a></div>
+            <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button></div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="../index.php" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
+                    </li>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a href="../Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
+                    </li>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><b><?php echo $lang['Nav4']?></b></a>
+                    </li>
+                </ul>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    
+                </ul>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="ctn-icon-search">
+                    <a href="#sonidos" class="fas fa-search hero3" id="icon-search"></a>
+                </div>
+        </div>
+         <ul class="social-icon ml-lg-3">
+            <li>
+                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+            </li>
+        </ul>
+    </nav>
 
+    <div id="icon-menu">
+            <i class="fas fa-bars" style="white"></i>
+        </div>
 
+         <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+    </div>
+
+        <ul id="box-search">
+        <li>
+            <audio controls>
+                <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/huevo.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['huevo']?>
+            </a>
+        </li>
+
+         <li>
+            <audio controls>
+                <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/pajaros.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
+            </a>
+        </li>
+
+         <li>
+            <audio controls>
+                <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/trailer.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['trailer']?>
+            </a>
+        </li>
+
+         <li>
+            <audio controls>
+                <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+            </audio>
+            <a href="../audios/acelerar.mp3">
+                <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
+            </a>
+        </li>
+
+        <li>
+           
+            <a href="Paginas/AlbumCocina.php">
+                <i class="fas fa-search"></i><?php echo $lang['AC']?>
+            </a>
+        </li>
+        
+    </ul>
+
+    <div id="cover-ctn-search"></div>  
+</header>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
 
 
     <section class="forms d-flex flex-column justify-content-center align-items-center">

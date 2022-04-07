@@ -40,7 +40,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Latin<img src="images/logos/logo.png" width="150" height="115">Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic<img src="images/back/lo.png" width="150" height="115">Sound</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,28 +48,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
                     </li>
-
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
-
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><b><?php echo $lang['Nav4']?></b></a>
                     </li>
                 </ul>
-                --------------
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                     
                 </ul>
-                ------------
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div class="ctn-icon-search">
-                    <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                    <a href="#sonidos" class="fas fa-search hero3" id="icon-search"></a>
                 </div>
         </div>
          <ul class="social-icon ml-lg-3">
@@ -145,10 +145,10 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto col-12">
                         <div class="hero-text mt-5 text-center">
-                            <h6 data-aos="fade-up" data-aos-delay="300"><?php echo $lang['Hero1']?></h6>
+                            <h6 data-aos="fade-up" data-aos-delay="300" class="hero3"><b><?php echo $lang['Hero1']?></b></h6>
                             <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Hero2']?></h1>
-                            <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Hero3']?></a>
-                            <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><?php echo $lang['Hero4']?></a>
+                            <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><b><?php echo $lang['Hero3']?></b></a>
+                            <a href="#about" class="hero4 hero3 btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><b><?php echo $lang['Hero4']?></b></a>
                         </div>
                     </div>
                 </div>
@@ -162,8 +162,8 @@
             <div class="row">
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
                     <h2 class="hero3" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
-                    <h6 class="hero3" data-aos="fade-up"><?php echo $lang['Ini2']?></h6>
-                    <a href="web_services/registrer.php" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><?php echo $lang['Ini11']?></a>
+                    <h6 class="hero3" data-aos="fade-up"><b><?php echo $lang['Ini2']?></b></h6>
+                    <a href="web_services/registrer.php" class="hero4 hero3 btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><b><?php echo $lang['Ini11']?></b></a>
                 </div>
 
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
@@ -262,7 +262,7 @@
                     <div class="row">
 
                             <div class="hero3 col-lg-12 col-12 text-center mb-5">
-                                <h6 data-aos="fade-up">Miles de albumes libres de derecho</h6>
+                                <h6 class="hero3" data-aos="fade-up"><b>Miles de albumes libres de derecho</b></h6>
 
                                 <h2 data-aos="fade-up" data-aos-delay="200">Los mas escuchados</h2>
                              </div>
@@ -273,13 +273,10 @@
 
                                     <div class="class-info">
                                         <a href="Paginas/AlbumCocina.php">
-                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+                                            <h3 class="mb-1 hero3"><?php echo $lang['Sound3']?></h3>
                                         </a>
-                                       
-
-                                        
-
-                                        <p class="mt-3"><?php echo $lang['Sound6']?></p>
+                       
+                                        <p class="mt-3 hero3" ><b><?php echo $lang['Sound6']?></b></p>
                                     </div>
                                 </div>
                             </div>
@@ -289,13 +286,13 @@
                                     <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound7']?></h3>
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound7']?></h3>
 
                                         
 
                                         
 
-                                        <p class="mt-3"><?php echo $lang['Sound10']?></p>
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound10']?></b></p>
                                     </div>
                                 </div>
                             </div>
@@ -305,13 +302,13 @@
                                     <img src="images/class/natural.jpeg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound11']?></h3>
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound11']?></h3>
 
                                         
 
                                         
 
-                                        <p class="mt-3"><?php echo $lang['Sound14']?></p>
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound14']?></b></p>
                                     </div>
                                 </div>
                             </div>
@@ -365,7 +362,7 @@
             <div class="row">
 
                     <div class="ml-auto col-lg-4 col-md-5">
-                        <p class="copyright-text">Copyright &copy; 2022 Epic Sound FX
+                        <p class="copyright-text hero3"><b>Copyright &copy; 2022 Epic Sound FX</b>
                         
                         <br></i><?php echo $lang['Cont7']?>: <a href="https://www.empresa.com">Empresa</a></p>
                     </div>
@@ -373,10 +370,10 @@
                     <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
                         <p class="mr-4">
                             <i class="fa fa-envelope-o mr-1"></i>
-                            <a href="#">hello@company.co</a>
+                            <a href="#"><b>hello@company.co</b></a>
                         </p>
 
-                        <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
+                        <p><i class="fa fa-phone mr-1 hero3"></i><b class="hero3"> 010-020-0840</b></p>
                     </div>
                     
             </div>

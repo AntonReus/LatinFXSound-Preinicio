@@ -30,10 +30,8 @@
 
 </head>    
     <header>
-    
-    <!-- MENU BAR -->
-     <nav class="navbar navbar-expand-lg fixed-top">
-         <div class="row">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="row">
                 <div class="col text-center">
                     <label id="switch">
                         <input type="checkbox">
@@ -42,7 +40,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
+            <div><a class="navbar-brand" href="../index.php">Epic<img src="../images/back/lo.png" width="150" height="115">Sound</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,28 +48,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="../index" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
                     </li>
-
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                        <a href="../Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
-
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><b><?php echo $lang['Nav4']?></b></a>
                     </li>
                 </ul>
-                --------------
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                     
                 </ul>
-                ------------
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div class="ctn-icon-search">
-                    <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                    <a href="#sonidos" class="fas fa-search hero3" id="icon-search"></a>
                 </div>
         </div>
          <ul class="social-icon ml-lg-3">
@@ -127,11 +125,16 @@
             </a>
         </li>
 
+        <li>
+           
+            <a href="Paginas/AlbumCocina.php">
+                <i class="fas fa-search"></i><?php echo $lang['AC']?>
+            </a>
+        </li>
         
     </ul>
 
     <div id="cover-ctn-search"></div>  
-
 </header>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 

@@ -28,11 +28,9 @@
     <link rel="stylesheet" href="../css/blog.css">
 
 </head>    
-    <header>
-    
-    <!-- MENU BAR -->
-     <nav class="navbar navbar-expand-lg fixed-top">
-         <div class="row">
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="row">
                 <div class="col text-center">
                     <label id="switch">
                         <input type="checkbox">
@@ -41,7 +39,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic<img src="../images/back/lo.png" width="150" height="115">Sound</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,28 +47,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><?php echo $lang['Nav4']?></a>
+                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><b><?php echo $lang['Nav4']?></b></a>
                     </li>
                 </ul>
-                --------------
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 <ul class="social-icon ml-lg-3">
                     <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-twitter"></a></li>
                     <li><a href="#" class="fa fa-instagram"></a></li>
                     
                 </ul>
-                ------------
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div class="ctn-icon-search">
-                    <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
+                    <a href="#sonidos" class="fas fa-search hero3" id="icon-search"></a>
                 </div>
         </div>
          <ul class="social-icon ml-lg-3">
@@ -126,11 +124,16 @@
             </a>
         </li>
 
+        <li>
+           
+            <a href="Paginas/AlbumCocina.php">
+                <i class="fas fa-search"></i><?php echo $lang['AC']?>
+            </a>
+        </li>
         
     </ul>
 
     <div id="cover-ctn-search"></div>  
-
 </header>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
@@ -155,18 +158,16 @@
                     </div>
                
                     <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600"><?php echo $lang['Cont6']?></span></h2>
+                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">A sus ordenes</span></h2>
 
-                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i><?php echo $lang['Cont6']?></p>
+                       <p class="mb-4"><b>Cualquier queja o sugerencia sera atendida, asi como agradecemos que de no encontrar el sonido que busca nos lo haga saber para agregarlo a nuestras librerias</b></p>
 <!-- How to change your own map point
     1. Ir a google map
     2. Click en la localidad del cliente
     3. Click en "compartir" y elegir "incorporar un mapa" tab
     4. Copiar solo la URL en el campo src="" 
 -->
-                        <div class="google-map" data-aos="fade-up" data-aos-delay="900">
-                           <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                        </div>
+                        
                     </div>
                     
                </div>
