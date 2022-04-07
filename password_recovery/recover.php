@@ -1,4 +1,18 @@
-<?php include('../language/config.php') ?>
+<?php include('recover_process.php');
+$errors = array();
+if (!isset($_SESSION['lang']))
+$_SESSION['lang'] = "es";
+else if (isset($_GET['lang'])        && $_SESSION['lang'] != $_GET['lang'] && !empty($_GET['lang']))
+{
+if ($_GET['lang'] == "es")
+    $_SESSION['lang'] = "es";
+else if ($_GET['lang']  == "en")
+    $_SESSION['lang'] = "en";
+    else if ($_GET['lang']  == "it")
+    $_SESSION['lang'] = "it";
+}
+require_once "../language/" . $_SESSION['lang'] . ".php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +41,7 @@
     <link rel="stylesheet" href="../css/blog.css">
 </head>
 <header>
-    <!-- MENU BAR -->
+    <!--  MENU BAR  -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
@@ -74,10 +88,10 @@
                         <?php include('../web_services/errors.php'); ?>
                         <?php echo $lang['Rec2']?>
                         <div class="input-group">
-                            <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
+                            <input type="email" name="login_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['InSes2']?>">
                         </div>
                         <div class="input-group">
-                            <button type="submit" class="form-control" id="send_recover" name="send_recover"><?php echo $lang['Rec3']?></button>
+                            <button type="submit" name="subforgot" class="form-control"><?php echo $lang['Rec3']?></button>
                         </div>
                     </form>
                 </div>
@@ -88,22 +102,18 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-
                     <div class="ml-auto col-lg-4 col-md-5">
                         <p class="copyright-text">Copyright &copy; 2022 Epic Sound FX
                         
                         <br></i><?php echo $lang['Cont7']?>: <a href="https://www.empresa.com">Empresa</a></p>
                     </div>
-
                     <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
                         <p class="mr-4">
                             <i class="fa fa-envelope-o mr-1"></i>
                             <a href="#">hello@company.co</a>
                         </p>
-
                         <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
                     </div>
-                    
             </div>
         </div>
     </footer>

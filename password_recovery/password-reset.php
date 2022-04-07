@@ -32,6 +32,16 @@
                         </a>
                     </div>
                     <?php
+                        $email    = "";
+                        $password_1 = "";
+                        $password_2 = "";
+                        $token = "";
+                        $errors = array();
+                        $check_1 = array();
+                        $check_2 = array();
+                        $password = "";
+                        $user_id = "";
+                        $conn = mysqli_connect('localhost', 'root', '', 'latinfxsound-preinicio');
                         if(isset($_GET['token']))
                         {
                         $token= $_GET['token'];
