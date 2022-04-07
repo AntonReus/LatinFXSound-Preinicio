@@ -25,7 +25,7 @@ $password = "";
 $user_id = "";
 
 // connect to the database local -- Coment in case of work whit Ivan
-$conn = mysqli_connect('localhost', 'root', 'root', 'latinfxsound-preinicio');
+$conn = mysqli_connect('localhost', 'root', '', 'latinfxsound-preinicio');
 
 //***************Register */
 if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {

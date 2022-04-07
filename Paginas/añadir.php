@@ -1,6 +1,6 @@
-<?
-include('../language/config.php');// conexion a la bd
-//$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla
+<?php
+include('../language/config.php'); /**  conexion a la bd*/
+/**$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla*/
 
 if(isset($_POST['insertar']))//si apretamos el boton..
 {
@@ -26,20 +26,21 @@ if(isset($_POST['insertar']))//si apretamos el boton..
         ¡PERSONAJE AÑADIDO EXITOSAMENTE! <a href='index.php'>VER AQUÍ</a></div>";
     }
 
-    else //pero si no se ejecuta correctamente, lanza el mensaje:
+    else
+    //pero si no se ejecuta correctamente, lanza el mensaje:
     {
         $mensaje="<div class='col-md-offset-4 col-md-4 alert alert-danger text-center'>
         ¡EL PERSONAJE NO PUDO AGREGARSE!</div>";
     }
 }
 ?>
+<?php //include ("../language/config.php");?>
 
-<?php include ("../language/config.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-     <title>LATINFXSOUND*** - <?php echo $lang['Sound3']?></title>
+     <title>Epic Sound FX <?php echo $lang['Sound3']?></title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
