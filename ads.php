@@ -1,6 +1,6 @@
 <?php 
 
-include("..language/config.php");
+include("..config/config.php");
 if(isset($_POST['insert'])){
     $nom = $_POST['nombre_sonido'];
     $dur = $_POST['duracion'];

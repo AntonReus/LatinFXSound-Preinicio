@@ -1,5 +1,5 @@
 <?php
-include('../language/config.php'); /**  conexion a la bd*/
+include('../config/config.php'); /**  conexion a la bd*/
 /**$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla*/
 
 if(isset($_POST['insert']))//si apretamos el boton..
@@ -34,7 +34,7 @@ if(isset($_POST['insert']))//si apretamos el boton..
     }
 }
 ?>
-<?php //include ("../language/config.php");?>
+<?php //include ("../config/config.php");?>
 
 <!DOCTYPE html>
 <html lang="en">

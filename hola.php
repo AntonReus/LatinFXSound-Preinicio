@@ -1,5 +1,5 @@
 <?php// include('../config/connection.php') ?>
-<?php include"../language/config.php" ?>
+<?php include"../config/config.php" ?>
 
 <?
 include('conexion.php');// conexion a la bd
