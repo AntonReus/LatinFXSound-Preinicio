@@ -1,50 +1,8 @@
 <?php
-include('config/config.php');
-if (!isLoggedIn()) {
-	$_SESSION['msg'] = "You must log in first";
-	header('location: login.php');
-}
-if (isset($_GET['logout'])) {
-	session_destroy();
-	unset($_SESSION['user']);
-	header("location: login.php");
-}
- /**  conexion a la bd*/
-/**$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla*/
-
-if(isset($_POST['insert']))//si apretamos el boton..
-{
-    $nombre=$_POST['nombre_sonido'];
-    $cargarSonido=($_FILES['sonido']['tmp_name']);//carga el archivo
-    $son=fopen($cargarSonido, 'rb');//leer el archivo como binario
-    $dur=$_POST['duracion'];
-    $bits=$_POST['BPM'];
-    $alb=$_POST['album'];
-
-    $insertarPJ=$conexion->prepare("INSERT INTO canciones (nombre, sonido, duracion, bpm, album) VALUES (:nombre, :sound, :dura, :b, :al)");
-    $insertarPJ->bindParam(':nombre', $nombre, PDO::PARAM_STR);
-    $insertarPJ->bindParam(':sound', $son, PDO::PARAM_LOB);
-    $insertarPJ->bindParam(':dura', $dur, PDO::PARAM_STR);
-    $insertarPJ->bindParam(':b', $bits, PDO::PARAM_STR);
-    $insertarPJ->bindParam(':al', $alb, PDO::PARAM_STR);
-    $insertarPJ->execute();
-
-    if($insertarPJ)//si la query se ejecuta con exito lanza el mensaje:
-    {
-        
-        $mensaje="<div class='col-md-offset-4 col-md-4 alert alert-success text-center'>
-        ¡PERSONAJE AÑADIDO EXITOSAMENTE! <a href='index.php'>VER AQUÍ</a></div>";
-    }
-
-    else
-    //pero si no se ejecuta correctamente, lanza el mensaje:
-    {
-        $mensaje="<div class='col-md-offset-4 col-md-4 alert alert-danger text-center'>
-        ¡EL PERSONAJE NO PUDO AGREGARSE!</div>";
-    }
-}
+include('conexion.php');// conexion a la bd
 ?>
-<?php //include ("config/config.php");?>
+<?php include ("config/config.php");?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -193,8 +151,7 @@ if(isset($_POST['insert']))//si apretamos el boton..
 <br>
 <br>
 <br>
-
-
+<form method="POST" enctype="multipart/form-data" action="addsong.php">
     <section class="forms d-flex flex-column justify-content-center align-items-center">
         <div class="bg-overlay"></div>
         <div class="modal-content modal-dialog">
@@ -205,40 +162,43 @@ if(isset($_POST['insert']))//si apretamos el boton..
             </div>
             <div class="modal-body">
                 <form class="registrer_form" id="add_sound" role="form" method="post" action="">
-                    <?php include('errors.php'); ?>
+                   
                     <div class="input-group">
-                        <input type="tex" class="form-control" id="nombre_sonido" name="nombre_sonido" placeholder="Nombre del sonido">
+                        <input name="nombre" type="text" class="form-control" placeholder="Nombre">
                         
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control" id="duracion" name="duracion" placeholder="Duracion">
+                        <input name="duracion" type="text" class="form-control" placeholder="Duracion en min">
                        
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control" id="BPM" name="BPM" placeholder="BPM">
+                        <input  name="bpm" type="text" class="form-control" placeholder="BPM">
                        
                     </div>
 
                     <div class="input-group">
-                        <input type="text" class="form-control" id="album" name="album" placeholder="A que album pertenece">
+                        <input name="album" type="text" class="form-control" placeholder="Album al que pertenecera">
                         
                     </div>
 
                     <div class="input-group">
-                        <input type="file" class="form-control" id="sonido" name="sonido" placeholder="Sonido">
+                        <input name="sonido" type="file" class="form-control">
                     </div>
                     
                    
 
                     <div class="input-group">
-                        <button type="submit" class="form-control" name="insert" href="index.php">Añadir sonido</button>
+                        <td><input name="insertar" type="submit" class="btn btn-success" value="Insertar sonido" ></td>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+</form>
+
+   
 
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>

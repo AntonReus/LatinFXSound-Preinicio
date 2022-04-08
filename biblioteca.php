@@ -98,9 +98,11 @@ if (isset($_GET['logout'])) {
             <i class="fas fa-bars" style="white"></i>
         </div>
 
-         <div id="ctn-bars-search">
-        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
-    </div>
+        <form action="album.php" method="POST" name="buscar">
+            <div  id="ctn-bars-search">
+                <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?" name="buscarC">
+            </div>   
+        </form>
 
         <ul id="box-search">
         <li>
@@ -169,13 +171,17 @@ if (isset($_GET['logout'])) {
                                 <div class="class-thumb">
                                     <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
 
-                                    <div class="class-info">
-                                        <a href="AlbumCocina.php">
+                                    <form action="AlbumCocina.php" method="POST" name="buscar">
+                                        <div class="class-info">
+
+                                        <a href="AlbumCocina.php" name="bucsarC">
                                             <h3 class="mb-1 hero3"><?php echo $lang['Sound3']?></h3>
                                         </a>
                        
                                         <p class="mt-3 hero3" ><b><?php echo $lang['Sound6']?></b></p>
                                     </div>
+                                    </form>
+                                    
                                 </div>
                             </div>
 

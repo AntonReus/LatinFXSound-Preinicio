@@ -93,9 +93,11 @@ if (isset($_GET['logout'])) {
             <i class="fas fa-bars" style="white"></i>
         </div>
 
-         <div id="ctn-bars-search">
-        <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
-    </div>
+        <form action="album.php" method="POST" name="buscar">
+            <div  id="ctn-bars-search">
+                <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?" name="buscarC">
+            </div>   
+        </form>
 
         <ul id="box-search">
         <li>
