@@ -18,6 +18,7 @@ require_once "../language/" . $_SESSION['lang'] . ".php";
 <html lang="en">
 <head>
      <title><?php echo $lang['Title3']?> | Epic Sound FX</title>
+     <link rel="icon" type="image/x-icon" href="../favicon.ico">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">

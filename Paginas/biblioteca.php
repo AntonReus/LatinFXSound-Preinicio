@@ -7,6 +7,8 @@
 <head>
 
      <title>LATINFXSOUND*** - <?php echo $lang['Sound3']?></title>
+     
+     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
