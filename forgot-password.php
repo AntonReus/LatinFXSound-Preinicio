@@ -1,4 +1,5 @@
-<?php include('recover_process.php');
+<!DOCTYPE html>
+<?php require_once("config/configdb.php");
 $errors = array();
 if (!isset($_SESSION['lang']))
 $_SESSION['lang'] = "es";
@@ -12,12 +13,17 @@ else if ($_GET['lang']  == "en")
     $_SESSION['lang'] = "it";
 }
 require_once $_SESSION['lang'] . ".php";
+if(isset($_SESSION["login_sess"])) 
+{
+  header("location:account.php"); 
+}
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-     <title><?php echo $lang['Title3']?> | Epic Sound FX</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="style.css">
+    <title><?php echo $lang['Title3']?> | Epic Sound FX</title>
      <link rel="icon" type="image/x-icon" href="favicon.ico">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -42,7 +48,7 @@ require_once $_SESSION['lang'] . ".php";
     <link rel="stylesheet" href="css/blog.css">
 </head>
 <header>
-    <!--  MENU BAR  -->
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
@@ -73,60 +79,59 @@ require_once $_SESSION['lang'] . ".php";
     </nav>
 </header>
 <body>
-<section class="forms d-flex flex-column justify-content-center align-items-center">
-    <div class="bg-overlay"></div>
-    <div class="" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="membershipFormLabel"><?php echo $lang['Rec1']?></h2>
-                    <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="index.php">
-                        <span aria-hidden="true">&times;</span>
-                    </a>
-                </div>
-                <div class="modal-body">
-                    <form method="post" class="membership-form webform" role="form" action="">
-                        <?php include('errors.php'); ?>
-                        <?php echo $lang['Rec2']?>
-                        <div class="input-group">
-                            <input type="email" name="login_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['InSes2']?>">
+    <section class="forms d-flex flex-column justify-content-center align-items-center">
+        <div class="bg-overlay"></div>
+            <div class="" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="membershipFormLabel"><?php echo $lang['Rec1']?></h2>
+                            <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="index.php">
+                                <span aria-hidden="true">&times;</span>
+                            </a>
                         </div>
-                        <div class="input-group">
-                            <button type="submit" name="subforgot" class="form-control"><?php echo $lang['Rec3']?></button>
+                        <form action="forgot_process.php" method="POST">
+                            <div class="login_form">
+                                <div class="form-group">
+                                    <?php if(isset($_GET['err'])){
+                                        $err=$_GET['err'];
+                                        echo '<p class="errmsg">No user found. </p>';
+                                        } 
+                                        // If server error 
+                                        if(isset($_GET['servererr'])){ 
+                                        echo "<p class='errmsg'>The server failed to send the message. Please try again later.</p>";
+                                        }
+                                        //if other issues 
+                                        if(isset($_GET['somethingwrong'])){ 
+                                        echo '<p class="errmsg">Something went wrong.  </p>';
+                                        }
+                                        // If Success | Link sent 
+                                        if(isset($_GET['sent'])){
+                                        echo "<div class='successmsg'>Reset link has been sent to your registered email id . Kindly check your email. It can be taken 2 to 3 minutes to deliver on your email id . </div>"; 
+                                        }
+                                    ?>
+                                    <?php if(!isset($_GET['sent'])){ ?>
+                                    <div class="input-group">
+                                        <input type="text" name="login_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['InSes2']?>">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <button type="submit" name="subforgot" class="form-control"><?php echo $lang['Rec3']?></button>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </form>
+                        <br> 
+                        <p>Have an account? <a href="login.php">Login</a> </p>
+                            <p>Don't have an account? <a href="registrer.php">Sign up</a> </p> 
                         </div>
-                    </form>
+                    <div class="col-sm-4">
+                    </div>
                 </div>
-        </div>
-    </div>
-</section>
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                    <div class="ml-auto col-lg-4 col-md-5">
-                        <p class="copyright-text">Copyright &copy; 2022 Epic Sound FX
-                        
-                        <br></i><?php echo $lang['Cont7']?>: <a href="https://www.empresa.com">Empresa</a></p>
-                    </div>
-                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
-                        <p class="mr-4">
-                            <i class="fa fa-envelope-o mr-1"></i>
-                            <a href="#">hello@company.co</a>
-                        </p>
-                        <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
-                    </div>
             </div>
         </div>
-    </footer>
-    <!-- SCRIPTS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/own.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
+    </section>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

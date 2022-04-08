@@ -58,7 +58,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
         }
     }
     $options = array("cost"=>4);
-    $password_1 = password_hash($password,PASSWORD_BCRYPT,$options);//encrypt the password before saving in the database
+    $password_1 = md5($password_1);//encrypt the password before saving in the database
 
     // Register user if there are no errors in the form
     if (count($errors) == 0) {
@@ -121,7 +121,7 @@ if(isset($_POST['login_user']))
         
         if (count($errors) == 0) {
             $options = array("cost"=>4);
-            $password = password_hash($password,PASSWORD_BCRYPT,$options);
+            $password = md5($password);
             $query = "SELECT * FROM users WHERE email='$email' AND password='$password' LIMIT 1";
             $results = mysqli_query($conn, $query);
 

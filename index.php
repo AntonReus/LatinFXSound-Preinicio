@@ -1,4 +1,9 @@
-<?php include ("config/config.php");?>
+<?php include ("config/config.php");
+if (isLoggedIn()) {
+	$_SESSION['msg'] = "You must log";
+	header('location: biblioteca.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -393,7 +398,7 @@
                     </button>
                 </div>
                 <div>
-                    <a class="social-icon ml-lg-3" href="recover.php"><?php echo $lang['InSes7']?></a>
+                    <a class="social-icon ml-lg-3" href="forgot-password.php"><?php echo $lang['InSes7']?></a>
                 </div>
                 <div class="modal-body">
                     <form method="post" class="membership-form webform" role="form" action="">
