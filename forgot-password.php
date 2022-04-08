@@ -1,4 +1,4 @@
-<?php
+<?php include('recover_process.php');
 $errors = array();
 if (!isset($_SESSION['lang']))
 $_SESSION['lang'] = "es";
@@ -85,32 +85,14 @@ require_once $_SESSION['lang'] . ".php";
                     </a>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" class="membership-form webform" action="recover.php">
-                    <?php if(isset($_GET['err'])){
-                        $err=$_GET['err'];
-                        echo '<p class="errmsg">No user found. </p>';
-                        } 
-                        // If server error 
-                        if(isset($_GET['servererr'])){ 
-                        echo "<p class='errmsg'>The server failed to send the message. Please try again later.</p>";
-                        }
-                        //if other issues 
-                        if(isset($_GET['somethingwrong'])){ 
-                        echo '<p class="errmsg">Something went wrong.  </p>';
-                        }
-                        // If Success | Link sent 
-                        if(isset($_GET['sent'])){
-                        echo "<div class='successmsg'>Reset link has been sent to your registered email id . Kindly check your email. It can be taken 2 to 3 minutes to deliver on your email id . </div>"; 
-                        }
-                    ?>
-                    <?php if(!isset($_GET['sent'])){ ?>
+                    <form method="post" class="membership-form webform" role="form" action="">
+                        <?php include('errors.php'); ?>
                         <?php echo $lang['Rec2']?>
                         <div class="input-group">
                             <input type="email" name="login_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['InSes2']?>">
                         </div>
                         <div class="input-group">
                             <button type="submit" name="subforgot" class="form-control"><?php echo $lang['Rec3']?></button>
-                            <?php } ?>
                         </div>
                     </form>
                 </div>

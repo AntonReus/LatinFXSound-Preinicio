@@ -1,6 +1,5 @@
-<?php include ("config/config.php");?>
-
 <!DOCTYPE html>
+<?php include ("config/config.php");?>
 <html lang="en">
 <head>
 <title><?php echo $lang['Slogan']?></title>
@@ -33,89 +32,77 @@
                         </a>
                     </div>
                     <?php
-                        $email    = "";
-                        $password_1 = "";
-                        $password_2 = "";
-                        $token = "";
-                        $errors = array();
-                        $check_1 = array();
-                        $check_2 = array();
-                        $password = "";
-                        $user_id = "";
                         $conn = mysqli_connect('localhost', 'root', '', 'latinfxsound-preinicio');
                         if(isset($_GET['token']))
                         {
-                        $token= $_GET['token'];
+                            $token= $_GET['token'];
                         }
                         //form for submit 
-                        if(isset($_POST['new_password'])){
+                        if(isset($_POST['sub_set'])){
                             extract($_POST);
-                            $user_password_1 = "";
-                            $user_password_2 = "";
-                            $user_password_1 = mysqli_real_escape_string($conn, $_POST['user_password_1']);
-                            $user_password_2 = mysqli_real_escape_string($conn, $_POST['user_password_2']);
-                        if($user_password_1 ==''){
-                            $error[] = 'Please enter the password.';
-                        }
-                        if($user_password_2 ==''){
-                            $error[] = 'Please confirm the confirm password.';
-                        }
-                        if($user_password_1 != $user_password_2){
-                            $error[] = 'Passwords do not match.';
-                        }
-                        if(strlen($user_password_1)>50){ // Max 
-                        $error[] = 'Password: Max length 50 Characters Not allowed';
-                        }
-                        $fetchresultok = mysqli_query($conn, "SELECT email FROM pass_reset WHERE token='$token'");
-                        if($res = mysqli_fetch_array($fetchresultok))
-                        {
-                            $email= $res['email']; 
-                        }
-                        if(isset($email) != '' ) {
-                            $emailtok=$email;
-                        }
-                        else
-                        {
-                            $error[] = 'Link has been expired or something missing ';
-                            $hide=1;
-                        }
-                        if(!isset($error)){
-                            $options = array("cost"=>4);
-                            $user_password_1 = md5($user_password_1);
-                            $resultresetpass= mysqli_query($conn, "UPDATE users SET password='$user_password_1' WHERE (email='$emailtok' OR email='$email')"); 
-                            if($resultresetpass) 
-                            { 
-                                $success="<div class='error'><br>Tu contraseña ha sido cambiada<br><a href='index.php'>Inicia Sesión</a></div><br>";
-                                $resultdel = mysqli_query($conn, "DELETE FROM pass_reset WHERE token='$token'");
+                            if($password ==''){
+                                $error[] = 'Please enter the password.';
+                            }
+                            if($passwordConfirm ==''){
+                                $error[] = 'Please confirm the password.';
+                            }
+                            if($password != $passwordConfirm){
+                                $error[] = 'Passwords do not match.';
+                            }
+                            if(strlen($password)<5){ // min 
+                                $error[] = 'The password is 6 characters long.';
+                            }
+                            if(strlen($password)>50){ // Max 
+                                $error[] = 'Password: Max length 50 Characters Not allowed';
+                            }
+                                $fetchresultok = mysqli_query($conn, "SELECT email FROM pass_reset WHERE token='$token'");
+                            if($res = mysqli_fetch_array($fetchresultok))
+                            {
+                                $email= $res['email']; 
+                            }
+                            if(isset($email) != '' ) {
+                                $emailtok=$email;
+                            }
+                            else
+                            {
+                                $error[] = 'Link has been expired or something missing ';
                                 $hide=1;
                             }
+                            if(!isset($error)){
+                                $options = array("cost"=>4);
+                                $password = password_hash($password,PASSWORD_BCRYPT,$options);
+                                $resultresetpass= mysqli_query($conn, "UPDATE users SET password='$password' WHERE email='$emailtok'"); 
+                                if($resultresetpass) 
+                                { 
+                                    $success="<div class='successmsg'><span style='font-size:100px;'>&#9989;</span> <br> Your password has been updated successfully.. <br> <a href='login.php' style='color:#fff;'>Login here... </a> </div>";
+                                    $resultdel = mysqli_query($conn, "DELETE FROM pass_reset WHERE token='$token'");
+                                    $hide=1;
+                                }
+                            }
                         }
-                    }
                     ?>
                 <div class="modal-body">
-                    <form method="post" class="membership-form webform" role="form" action="password-reset.php">
-                        <?php //include('errors.php');
-                            if(isset($error)){
-                              foreach($error as $error){
-                                echo '<div class="error">'.$error.'</div><br>';
-                              }
-                            }
-                            if(isset($success)){
-                              echo $success;
-                            }
-                        ?>
-                        <?php echo $lang['Rec5']?>
-                        <div class="input-group">
-                            <label></label>
-                            <input type="password" class="form-control" name="user_password_1" id="user_password_1" placeholder="<?php echo $lang['Reg4']?>">
+                    <form method="POST" class="membership-form webform" action="">
+                        <div>
+                            <?php echo $lang['Rec5']?>
+                            <?php 
+                                if(isset($error)){
+                                    foreach($error as $error){
+                                    echo '<div class="errmsg">'.$error.'</div><br>';
+                                    }
+                                }
+                                if(isset($success)){
+                                    echo $success;
+                                }
+                            ?>
+                            <?php if(!isset($hide)){ ?>
+                            <input type="password" name="password" class="form-control" required placeholder="<?php echo $lang['Reg4']?>">
                         </div>
-                        <div class="input-group">
-                            <label></label>
-                            <input type="password" class="form-control" name="user_password_2" id="user_password_2" placeholder="<?php echo $lang['Reg5']?>">
+                        <div class="form-group">
+                            <input type="password" name="passwordConfirm" class="form-control" required placeholder="<?php echo $lang['Reg5']?>">
                         </div>
-                        <div class="input-group">
-                            <button type="submit" class="form-control" id="new_password" name="new_password">Continuar</button>
-                        </div>
+                        <button type="submit" name="sub_set" class="form-control"><?php echo $lang['Rec3']?></button>
+                        <?php } ?>
                     </form>
                 </div>
                 <div class="modal-footer"></div>

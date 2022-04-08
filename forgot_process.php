@@ -2,10 +2,10 @@
 session_start();
 
 $dbHost = 'localhost';
-$dbName = 'latinfxsound-preinicio';
+$dbName = 'tutorials';
 $dbUsername = 'root';
 $dbPassword = '';
-$conn= mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName); //forgot_process
+$conn= mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
 if(isset($_POST['subforgot'])){
 $login=$_REQUEST['login_var'];
@@ -38,26 +38,22 @@ $headers  = "MIME-Version: 1.0\n";
          $subject="You have received password reset email"; 
      $msg="Your password reset link <br> http://localhost/LatinFXSound-Preinicio/password-reset.php?token=".$token." <br> Reset your password with this link .Click or open in new tab<br><br> <br> <br> <center>".$credits."</center>"; 
    if(@mail($oldftemail, $subject, $msg, $headers,'-f'.$FromEmail) ){
-//header("location:pending.php?sent=1");
-header("location:recover.php?sent=1"); 
+header("location:pending.php?sent=1"); 
 $hide='1';
           
     } else {
         
-    //header("location:pending.php?servererr=1");
-    header("location:recover.php?servererr=1"); 
+    header("location:pending.php?servererr=1"); 
 } 
       } 
       else 
       { 
-          //header("location:pending.php?something_wrong=1");
-          header("location:recover.php?something_wrong=1"); 
+          header("location:pending.php?something_wrong=1"); 
       }     
 }
 else  
 {
-//header("location:pending.php?err=".$login);
-header("location:recover.php?err=".$login); 
+header("location:pending.php?err=".$login); 
 }
 }
 ?>
