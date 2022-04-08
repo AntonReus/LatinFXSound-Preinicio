@@ -4,7 +4,7 @@
 <html lang="en" dir="ltr">
 <head>
 
-     <title>Epic Sound FX</title>
+     <title><?php echo $lang['Slogan']?></title>
      <link rel="icon" type="image/x-icon" href="favicon.ico">
 
      <meta charset="UTF-8">
@@ -17,6 +17,7 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/bibliotecas.css">
      
      <!--Multilanguage-->
 
@@ -41,7 +42,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<!-- <img src="images/back/lo.png" width="150" height="115"> -->Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -392,7 +393,7 @@
                     </button>
                 </div>
                 <div>
-                    <a class="social-icon ml-lg-3" href="password_recovery/recover.php"><?php echo $lang['InSes7']?></a>
+                    <a class="social-icon ml-lg-3" href="recover.php"><?php echo $lang['InSes7']?></a>
                 </div>
                 <div class="modal-body">
                     <form method="post" class="membership-form webform" role="form" action="">

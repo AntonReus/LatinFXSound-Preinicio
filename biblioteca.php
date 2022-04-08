@@ -1,11 +1,21 @@
-<?php// include('config/connection.php') ?>
-<?php include ("config/config.php");?>
+<?php include ("config/config.php");
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: login.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-     <title>LATINFXSOUND*** - <?php echo $lang['Sound3']?></title>
+<title><?php echo $lang['Slogan']?></title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
      
      <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -19,6 +29,7 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/bibliotecas.css">
      
      <!--Multilanguage-->
 
@@ -41,7 +52,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<img src="images/back/lo.png" width="150" height="115">Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,11 +64,13 @@
                     </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
+                        <?php  if (isset($_SESSION['user'])) : ?>
+                            <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion"><b><?php echo $lang['Nav7']?></b></a>
+                        <?php endif ?>
                     </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="admin/admin_users.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav6']?></b></a>
+                        <a href="admin_users.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav6']?></b></a>
                     </li>
                 </ul>
                 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
@@ -141,14 +154,15 @@
 
 
 <!-- Albums -->
-      <section class="class section" id="class">
+    <section class="class section hero4 hero d-flex flex-column justify-content-center align-items-center" id="class" style="">
+        <div class="bg-overlay"></div>
                <div class="container">
                     <div class="row">
 
-                            <div class="col-lg-12 col-12 text-center mb-5">
-                                <h6 data-aos="fade-up">Miles de albumes libres de derecho</h6>
+                            <div class="hero3 col-lg-12 col-12 text-center mb-5">
+                                <h6 class="hero3" data-aos="fade-up"><b><?php echo $lang['Alb1']?></b></h6>
 
-                                <h2 data-aos="fade-up" data-aos-delay="200">Los mas escuchados</h2>
+                                <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Alb2']?></h2>
                              </div>
 
                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
@@ -157,13 +171,10 @@
 
                                     <div class="class-info">
                                         <a href="AlbumCocina.php">
-                                            <h3 class="mb-1"><?php echo $lang['Sound3']?></h3>
+                                            <h3 class="mb-1 hero3"><?php echo $lang['Sound3']?></h3>
                                         </a>
-                                        
-
-                                        
-
-                                        <p class="mt-3"><?php echo $lang['Sound6']?></p>
+                       
+                                        <p class="mt-3 hero3" ><b><?php echo $lang['Sound6']?></b></p>
                                     </div>
                                 </div>
                             </div>
@@ -173,13 +184,13 @@
                                     <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound7']?></h3>
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound7']?></h3>
 
                                         
 
                                         
 
-                                        <p class="mt-3"><?php echo $lang['Sound10']?></p>
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound10']?></b></p>
                                     </div>
                                 </div>
                             </div>
@@ -189,13 +200,13 @@
                                     <img src="images/class/natural.jpeg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
-                                        <h3 class="mb-1"><?php echo $lang['Sound11']?></h3>
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound11']?></h3>
 
                                         
 
                                         
 
-                                        <p class="mt-3"><?php echo $lang['Sound14']?></p>
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound14']?></b></p>
                                     </div>
                                 </div>
                             </div>
@@ -203,15 +214,13 @@
                     </div>
                </div>
      </section>
-
-    
-     <section class="feature" id="feature">
+    <footer style="" class="hero4 site-footer">
         <div class="container">
             <div class="row">
-                <a href="añadir.php" class="btn custom-btn bg-color mt-3"><?php echo $lang['Alb3']?></a>
+                <a href="añadir.php" class="btn custom-btn bg-color mt-3"><?php echo $lang['Alb3']?></a>                    
             </div>
         </div>
-</section>
+    </footer>
 
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>

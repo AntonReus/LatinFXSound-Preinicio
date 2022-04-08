@@ -1,6 +1,6 @@
 <?php
 include ("config/config.php");
-if (!isAdmin()) {
+if (!isMod()) {
 	$_SESSION['msg'] = "You must log in first";
 	header('location: login.php');
 }
@@ -15,6 +15,7 @@ if (isset($_GET['logout'])) {
 <html>
 <head>
     <title>admin | Epic Sound FX</title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -57,7 +58,7 @@ if (isset($_GET['logout'])) {
                     </li>
                     <li class="nav-item">
                         <?php  if (isset($_SESSION['user'])) : ?>
-                            <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion">Cerrar Sesión</a>
+                            <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion"><?php echo $lang['Nav7']?></a>
                         <?php endif ?>
                     </li>
                 </ul>

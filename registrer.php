@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title><?php echo $lang['Ini11']?> | Epic Sound FX</title>
+<title><?php echo $lang['Slogan']?></title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -83,7 +84,7 @@
                     </div>
                     <p><div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="signup-agree_1" name="signup-agree_1">
-                        <label class="custom-control-label text-small text-muted" for="signup-agree_1"><?php echo $lang['Reg6']?> <a href="#"><?php echo $lang['Reg7']?></a>
+                        <label class="custom-control-label text-small text-muted" for="signup-agree_1"><?php echo $lang['Reg6']?> <a href="termsconditions.php"><?php echo $lang['Reg7']?></a>
                         </label>
                     </div>
                     <p><div class="custom-control custom-checkbox">

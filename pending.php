@@ -4,7 +4,8 @@
 <html lang="en" dir="ltr">
 <head>
 
-     <title>Epic Sound FX</title>
+<title><?php echo $lang['Slogan']?></title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">

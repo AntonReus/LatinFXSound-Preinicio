@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+
 <title><?php echo $lang['Slogan']?></title>
      <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -16,7 +17,6 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
-     <link rel="stylesheet" href="css/bibliotecas.css">
      
      <!--Multilanguage-->
 
@@ -43,6 +43,9 @@
                     <li class="nav-item">
                         <a href="index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
+                    <li class="nav-item">
+                        <a href="biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                    </li>
                 </ul>
                 --------------
                 <ul class="social-icon ml-lg-3">
@@ -57,12 +60,6 @@
                     <a href="#sonidos" class="fas fa-search" id="icon-search"></a>
                 </div>
         </div>
-         <ul class="social-icon ml-lg-3">
-            <li>
-                <a href="login.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="login.php?lang=en"><?php echo $lang['en']?></a>
-            </li>
-        </ul>
     </nav>
 
     <div id="icon-menu">
@@ -100,7 +97,8 @@
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
-        <li>
+
+         <li>
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
@@ -108,73 +106,49 @@
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>
+
+        
     </ul>
-    <div id="cover-ctn-search"></div>
+
+    <div id="cover-ctn-search"></div>  
+
 </header>
-<body>
-<!-- Iniciar sesion -->
-<section class="forms d-flex flex-column justify-content-center align-items-center">
-    <div class="bg-overlay"></div>
-        <div class="" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
-            <div  id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <br>
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="membershipFormLabel"><?php echo $lang['InSes1']?></h2>
-                            <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="index.php">
-                                <span aria-hidden="true">&times;</span>
-                            </a>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+	<!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center">
+        <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto col-12">
+                        <div class="hero-text mt-5 text-center">
+                            <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Sug1']?></h1>
                         </div>
-                        <div>
-                            <a class="social-icon ml-lg-3" href="recover.php"><?php echo $lang['InSes7']?></a>
-                        </div>
-                        <div class="modal-body">
-                            <form method="post" class="membership-form webform" role="form" action="">
-                                <?php include('errors.php'); ?>
-                                <div class="input-group">
-                                    <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
-                                </div>
-                                <div class="input-group">
-                                    <input type="password" class="form-control" name="user_password" placeholder="<?php echo $lang['InSes3']?>">
-                                </div>
-                                <div class="input-group">
-                                    <button type="submit" class="form-control" id="login_user" name="login_user"><?php echo $lang['InSes4']?></button>
-                                </div>
-                                <br><p>
-                                <?php echo $lang['InSes5']?> <a href="registrer.php"><?php echo $lang['InSes6']?></a>
-                                </p>
-                            </form>
-                        </div>
-                    <div class="modal-footer"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-    <!-- FOOTER -->
-    <footer class="site-footer">
+    </section>
+
+	<!-- FOOTER -->
+	<footer class="site-footer">
         <div class="container">
             <div class="row">
-
-                    <div class="ml-auto col-lg-4 col-md-5">
-                        <p class="copyright-text">Copyright &copy; 2022 Epic Sound FX
-                        
-                        <br></i><?php echo $lang['Cont7']?>: <a href="https://www.empresa.com">Empresa</a></p>
-                    </div>
-
-                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
-                        <p class="mr-4">
-                            <i class="fa fa-envelope-o mr-1"></i>
-                            <a href="#">hello@company.co</a>
-                        </p>
-
-                        <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
-                    </div>
-                    
+				<div class="ml-auto col-lg-4 col-md-5">
+					<p class="copyright-text">Copyright &copy; 2022 Epic Sound FX
+					<br></i><?php echo $lang['Cont7']?>: <a href="https://www.empresa.com">Empresa</a></p>
+				</div>
+				<div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+					<p class="mr-4">
+						<i class="fa fa-envelope-o mr-1"></i>
+						<a href="#">hello@company.co</a>
+					</p>
+					<p><i class="fa fa-phone mr-1"></i> 010-020-0840</p>
+				</div>
             </div>
         </div>
     </footer>
+
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -185,5 +159,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
-    </body>
+</body>
 </html>

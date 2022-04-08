@@ -1,11 +1,20 @@
-<?php// include('config/connection.php') ?>
-<?php include"config/config.php" ?>
+<?php include"config/config.php";
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: login.php");
+}?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-     <title>LATINFXSOUND*** - <?php echo $lang['Sound3']?></title>
+    <title><?php echo $lang['Slogan']?></title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -17,6 +26,7 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/bibliotecas.css">
      
      <!--Multilanguage-->
 
@@ -38,7 +48,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<img src="images/back/lo.png" width="150" height="115">Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic<!-- <img src="images/back/lo.png" width="150" height="115"> -->Sound</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,9 +62,10 @@
                     <li class="nav-item">
                         <a href="biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
-
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><b><?php echo $lang['Nav4']?></b></a>
+                        <?php  if (isset($_SESSION['user'])) : ?>
+                            <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion"><b><?php echo $lang['Nav7']?></b></a>
+                        <?php endif ?>
                     </li>
                 </ul>
                 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
@@ -137,8 +148,9 @@
 
 <!-- CLASS -->
 
-    <section class="registrer bg-overlay modal-dialog-center" role="document">
-
+    <section class="biblio d-flex flex-column justify-content-center align-items-center" role="document"><p><p></p></p>
+        <div class="bg-overlay"></div>
+            <div class="container">
    
     </form>     
         <section class="schedule section" id="schedule">
@@ -244,20 +256,13 @@
                          <div class="row">
                              <div class="container">
                                  <div class="row">
-                                     <a href="Contacto.php" class="hero3 hero4 btn custom-btn bg-color mt-3 nav-link smoothScroll"  data-aos-delay="300" data-toggle="modal" ><b>Sugerencias</b></a>
+                                     <a href="Contacto.php" class="hero3 hero4 btn custom-btn bg-color mt-3 nav-link smoothScroll"><b>Sugerencias</b></a>
                                  </div>
                              </div>
                          </div>
                      </div>
                  </footer>
         </section>
-
-  
-
-     
-
-                
-
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>

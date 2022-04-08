@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Recover - Epic Sound FX</title>
+<title><?php echo $lang['Slogan']?></title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -65,7 +66,7 @@
                         if(strlen($user_password_1)>50){ // Max 
                         $error[] = 'Password: Max length 50 Characters Not allowed';
                         }
-                        $fetchresultok = mysqli_query($conn, "SELECT email FROM password_resets WHERE token='$token'");
+                        $fetchresultok = mysqli_query($conn, "SELECT email FROM pass_reset WHERE token='$token'");
                         if($res = mysqli_fetch_array($fetchresultok))
                         {
                             $email= $res['email']; 
@@ -85,14 +86,14 @@
                             if($resultresetpass) 
                             { 
                                 $success="<div class='error'><br>Tu contraseña ha sido cambiada<br><a href='index.php'>Inicia Sesión</a></div><br>";
-                                $resultdel = mysqli_query($conn, "DELETE FROM password_resets WHERE token='$token'");
+                                $resultdel = mysqli_query($conn, "DELETE FROM pass_reset WHERE token='$token'");
                                 $hide=1;
                             }
                         }
                     }
                     ?>
                 <div class="modal-body">
-                    <form method="post" class="membership-form webform" role="form" action="new_pass.php">
+                    <form method="post" class="membership-form webform" role="form" action="password-reset.php">
                         <?php //include('errors.php');
                             if(isset($error)){
                               foreach($error as $error){

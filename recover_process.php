@@ -36,7 +36,7 @@ $headers  = "MIME-Version: 1.0\n";
        $headers .= "X-Priority: 1\n"; 
        $headers .= "Return-Path: <".$FromEmail.">\n"; 
          $subject="You have received password reset email"; 
-     $msg="Your password reset link <br> http://localhost/LatinFXSound-Preinicio/password_recovery/password-reset.php?token=".$token." <br> Reset your password with this link .Click or open in new tab<br><br> <br> <br> <center>".$credits."</center>"; 
+     $msg="Your password reset link <br> http://localhost/LatinFXSound-Preinicio/password-reset.php?token=".$token." <br> Reset your password with this link .Click or open in new tab<br><br> <br> <br> <center>".$credits."</center>"; 
    if(@mail($oldftemail, $subject, $msg, $headers,'-f'.$FromEmail) ){
 header("location:pending.php?sent=1"); 
 $hide='1';

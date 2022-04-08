@@ -63,7 +63,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
     if (count($errors) == 0) {
         if (isset($_POST['reg_admin'])) {
             $user_type = "admin";
-            $query = "INSERT INTO userss (email, password, user_type) 
+            $query = "INSERT INTO users (email, password, user_type) 
                     VALUES('$email', '$password_1', '$user_type')";
             mysqli_query($conn, $query);
             $_SESSION['success'] = "";
@@ -73,7 +73,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
         else if (isset($_POST['reg_user'])) {
             if ($check_1 && $check_2) {
                 $user_type = "user";
-                $query = "INSERT INTO userss (email, password, user_type) 
+                $query = "INSERT INTO users (email, password, user_type) 
                         VALUES('$email', '$password_1', '$user_type')";
                 mysqli_query($conn, $query);
     
@@ -125,7 +125,14 @@ if(isset($_POST['login_user']))
 
             if (mysqli_num_rows($results) == 1) {
                 $logged_in_user = mysqli_fetch_assoc($results);
-                if ($logged_in_user['user_type'] == 'admin')
+                if ($logged_in_user['user_type'] == 'mod')
+                {
+                    $_SESSION['user'] = $logged_in_user;
+                    $_SESSION['success']  = "You are now logged in";
+                    //Falta direccionar a biblioteca o a algo
+                    header('location: admin_users.php');
+                }
+                else if ($logged_in_user['user_type'] == 'admin')
                 {
                     $_SESSION['user'] = $logged_in_user;
                     $_SESSION['success']  = "You are now logged in";
@@ -181,7 +188,7 @@ if(isset($_POST['send_recover'])){
             $headers .= "X-Priority: 1\n"; 
             $headers .= "Return-Path: <".$FromEmail.">\n"; 
             $subject="Restauración de contraseña"; 
-            $msg="Hola $oldftemail<br>Para cambiar tu contraseña por favor accede al siguiente link:<br>http://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=".$token."<br>Si no eres tu por favor ignora este mensaje.<br><center>".$credits."</center>"; 
+            $msg="Hola $oldftemail<br>Para cambiar tu contraseña por favor accede al siguiente link:<br>http://localhost/LatinFXSound-Preinicio/new_pass.php?token=".$token."<br>Si no eres tu por favor ignora este mensaje.<br><center>".$credits."</center>"; 
             if(@mail($oldftemail, $subject, $msg, $headers,'-f'.$FromEmail) ){
                 header("location:pending.php?sent=1");
                 $hide='1';
@@ -200,9 +207,9 @@ function isLoggedIn()
 		return false;
 	}
 }
-function isLoggedAdmin()
+function isMod()
 {
-    if($logged_in_user['user_type'] == 'admin') {
+	if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'mod' ) {
 		return true;
 	}else{
 		return false;

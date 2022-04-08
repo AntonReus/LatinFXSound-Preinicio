@@ -50,7 +50,7 @@ $(document).ready(function(){
             $.ajax({
 
                 type:'POST',
-                url:'registrer.php',
+                url:'web_services/registrer.php',
                 data:$("#registrer_form").serialize(),
                 success:function(result)
                 {

@@ -1,5 +1,15 @@
 <?php
-include('config/config.php'); /**  conexion a la bd*/
+include('config/config.php');
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: login.php");
+}
+ /**  conexion a la bd*/
 /**$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla*/
 
 if(isset($_POST['insert']))//si apretamos el boton..
@@ -40,7 +50,8 @@ if(isset($_POST['insert']))//si apretamos el boton..
 <html lang="en">
 <head>
 
-     <title>Epic Sound FX <?php echo $lang['Sound3']?></title>
+<title><?php echo $lang['Slogan']?></title>
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -75,7 +86,7 @@ if(isset($_POST['insert']))//si apretamos el boton..
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<img src="images/back/lo.png" width="150" height="115">Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -91,7 +102,9 @@ if(isset($_POST['insert']))//si apretamos el boton..
                     </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll" data-toggle="modal" data-target="#iniciarSesion"><b><?php echo $lang['Nav4']?></b></a>
+                        <?php  if (isset($_SESSION['user'])) : ?>
+                            <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion"><b><?php echo $lang['Nav7']?></b></a>
+                        <?php endif ?>
                     </li>
                 </ul>
                 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;

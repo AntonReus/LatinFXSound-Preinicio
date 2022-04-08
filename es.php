@@ -1,5 +1,6 @@
 <?php
     $lang = array(
+        "Slogan" => "Efectos de sonido libre de copyright para influencers",
         "Nav1" => "Inicio",
         "Nav2" => "Acerca de nosotros",
         "Nav3" => "Biblioteca",
@@ -74,6 +75,7 @@
         "Nav7" => "Cerrar Sesión",
         "Alb1" => "Miles de albumes libres de derecho",
         "Alb2" => "Los mas escuchados",
-        "Alb3" => "Añadir Album"
+        "Alb3" => "Añadir Album",
+        "Sug1" => "Hemos recibido tu mensaje, pronto recibiras una contestación en tu correo electronico",
     )
 ?>

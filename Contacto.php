@@ -1,11 +1,24 @@
-<?php// include('config/connection.php') ?>
-<?php include"config/config.php" ?>
+<?php include('email_process.php');
+$errors = array();
+if (!isset($_SESSION['lang']))
+$_SESSION['lang'] = "es";
+else if (isset($_GET['lang'])        && $_SESSION['lang'] != $_GET['lang'] && !empty($_GET['lang']))
+{
+if ($_GET['lang'] == "es")
+    $_SESSION['lang'] = "es";
+else if ($_GET['lang']  == "en")
+    $_SESSION['lang'] = "en";
+    else if ($_GET['lang']  == "it")
+    $_SESSION['lang'] = "it";
+}
+require_once $_SESSION['lang'] . ".php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-     <title>LATINFXSOUND*** - <?php echo $lang['Sound3']?></title>
+     <title><?php echo $lang['Slogan']?></title>
      <link rel="icon" type="image/x-icon" href="favicon.ico">
 
      <meta charset="UTF-8">
@@ -16,14 +29,15 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
-     
-     <!--Multilanguage-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/bibliotecas.css">
 
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
-     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!--Multilanguage-->
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/principal.css">
     <link rel="stylesheet" href="css/blog.css">
@@ -40,7 +54,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<img src="images/back/lo.png" width="150" height="115">Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -74,20 +88,17 @@
         </div>
          <ul class="social-icon ml-lg-3">
             <li>
-                <a href="index.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="index.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="Contacto.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="Contacto.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>
-
     <div id="icon-menu">
             <i class="fas fa-bars" style="white"></i>
         </div>
-
          <div id="ctn-bars-search">
         <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
     </div>
-
         <ul id="box-search">
         <li>
             <audio controls>
@@ -97,7 +108,6 @@
                 <i class="fas fa-search"></i><?php echo $lang['huevo']?>
             </a>
         </li>
-
          <li>
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
@@ -106,7 +116,6 @@
                 <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
             </a>
         </li>
-
          <li>
             <audio controls>
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
@@ -115,7 +124,6 @@
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
-
          <li>
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
@@ -124,56 +132,43 @@
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>
-
         <li>
-           
             <a href="AlbumCocina.php">
                 <i class="fas fa-search"></i><?php echo $lang['AC']?>
             </a>
         </li>
-        
     </ul>
-
     <div id="cover-ctn-search"></div>  
 </header>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
-
     <!-- CONTACT -->
-     <section class="contact section" id="contact">
-          <div class="container">
-               <div class="row">
-
-                    <div class="ml-auto col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Cont1']?></h2>
-
-                        <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
-                            <input type="text" class="form-control" name="cf-name" placeholder="<?php echo $lang['Cont2']?>">
-
-                            <input type="email" class="form-control" name="cf-email" placeholder="<?php echo $lang['Cont3']?>">
-
-                            <textarea class="form-control" rows="5" name="cf-message" placeholder="<?php echo $lang['Cont4']?>"></textarea>
-
-                            <button type="submit" class="form-control" id="submit-button" name="submit"><?php echo $lang['Cont5']?></button>
-                        </form>
-                    </div>
-               
-                    <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">A sus ordenes</span></h2>
-
-                       <p class="mb-4"><b>Cualquier queja o sugerencia sera atendida, asi como agradecemos que de no encontrar el sonido que busca nos lo haga saber para agregarlo a nuestras librerias</b></p>
-<!-- How to change your own map point
-    1. Ir a google map
-    2. Click en la localidad del cliente
-    3. Click en "compartir" y elegir "incorporar un mapa" tab
-    4. Copiar solo la URL en el campo src="" 
--->
-                        
-                    </div>
-                    
-               </div>
-          </div>
-     </section>
+    <section class="hero d-flex flex-column justify-content-center align-items-center">
+        <div class="bg-overlay"></div>
+            <div class="row">
+                <div class="ml-auto col-lg-5 col-md-6 col-12">
+                    <h2 class="mb-4 pb-2 hero3" data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Cont1']?></h2>
+                    <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
+                        <div class="input-group">
+                            <input type="email" name="login_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['InSes2']?>">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="asunto_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['Cont3']?>">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="mensaje_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['Cont4']?>">
+                        </div>
+                        <div class="input-group">
+                            <button type="submit" class="form-control hero3" id="submit-button" name="send_email"><b></b></h1><?php echo $lang['Cont5']?></h1></b></b></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
+                    <h2 class="mb-4 hero3" data-aos="fade-up" data-aos-delay="600">A sus ordenes</span></h2>
+                    <p class="mb-4 hero3"><b>Cualquier queja o sugerencia sera atendida, asi como agradecemos que de no encontrar el sonido que busca nos lo haga saber para agregarlo a nuestras librerias</b></p>
+                </div>
+            </div>
+    </section>
 
     <!-- SCRIPTS -->
     <script src="js/jquery.min.js"></script>

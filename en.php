@@ -1,5 +1,6 @@
 <?php
     $lang = array(
+        "Slogan" => "Copyright-free sound effects for influencers",
         "Nav1" => "Home",
         "Nav2" => "About Us",
         "Nav3" => "Library",
@@ -75,6 +76,7 @@
         "Alb1" => "Thousands of royalty free albums",
         "Alb2" => "The most listened to",
         "Alb3" => "Add Album",
+        "Sug1" => "We have received your message, you will soon receive a reply in your email",
         "" => "",
         "" => "",
         "" => "",
