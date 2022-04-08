@@ -1,5 +1,5 @@
-<?php// include('../config/connection.php') ?>
-<?php include"../config/config.php" ?>
+<?php// include('config/connection.php') ?>
+<?php include"config/config.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +14,18 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="../css/bootstrap.min.css">
-     <link rel="stylesheet" href="../css/font-awesome.min.css">
-     <link rel="stylesheet" href="../css/aos.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
      
      <!--Multilanguage-->
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
+     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../css/principal.css">
-    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/blog.css">
 
 </head>    
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -46,11 +46,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
+                        <a href="index.php" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
+                        <a href="biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
 
                     <li class="nav-item">
@@ -91,7 +91,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/huevo.mp3">
+            <a href="audios/huevo.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['huevo']?>
             </a>
         </li>
@@ -100,7 +100,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/pajaros.mp3">
+            <a href="audios/pajaros.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
             </a>
         </li>
@@ -109,7 +109,7 @@
             <audio controls>
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/trailer.mp3">
+            <a href="audios/trailer.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
@@ -118,14 +118,14 @@
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/acelerar.mp3">
+            <a href="audios/acelerar.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>
 
         <li>
            
-            <a href="Paginas/AlbumCocina.php">
+            <a href="AlbumCocina.php">
                 <i class="fas fa-search"></i><?php echo $lang['AC']?>
             </a>
         </li>
@@ -172,7 +172,7 @@
                                             <td>
                                                 <small>
                                                     <audio controls>
-                                                        <source src="../audios/AlbumCocina/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+                                                        <source src="audios/AlbumCocina/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
                                                     </audio>
                                                 </small>
                                             </td>
@@ -188,7 +188,7 @@
                                             <td>
                                                 <small>
                                                     <audio controls>
-                                                        <source src="../audios/AlbumCocina/burbujas.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+                                                        <source src="audios/AlbumCocina/burbujas.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
                                                     </audio>
                                                 </small>
                                             </td>
@@ -204,7 +204,7 @@
                                             <td>
                                                 <small>
                                                     <audio controls>
-                                                        <source src="../audios/AlbumCocina/freir.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+                                                        <source src="audios/AlbumCocina/freir.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
                                                     </audio>
                                                 </small>
                                             </td>
@@ -219,7 +219,7 @@
                                             <td>
                                                 <small>
                                                     <audio controls>
-                                                        <source src="../audios/AlbumCocina/batir.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
+                                                        <source src="audios/AlbumCocina/batir.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
                                                     </audio>
                                                 </small>
                                             </td>
@@ -244,7 +244,7 @@
                          <div class="row">
                              <div class="container">
                                  <div class="row">
-                                     <a href="../Paginas/Contacto.php" class="hero3 hero4 btn custom-btn bg-color mt-3 nav-link smoothScroll"  data-aos-delay="300" data-toggle="modal" ><b>Sugerencias</b></a>
+                                     <a href="Contacto.php" class="hero3 hero4 btn custom-btn bg-color mt-3 nav-link smoothScroll"  data-aos-delay="300" data-toggle="modal" ><b>Sugerencias</b></a>
                                  </div>
                              </div>
                          </div>
@@ -259,15 +259,15 @@
                 
 
     <!-- SCRIPTS -->
-    <script src="../js/jquery.min.js"></script>
-     <script src="../js/bootstrap.min.js"></script>
-     <script src="../js/aos.js"></script>
-     <script src="../js/smoothscroll.js"></script>
-     <script src="../js/custom.js"></script>
-     <script src="../js/own.js"></script>
+    <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/own.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script src="../js/jquery-3.6.0.min.js"></script>
-     <script src="../js/script.js"></script>
-     <script src="../js/mode.js"></script>
+     <script src="js/jquery-3.6.0.min.js"></script>
+     <script src="js/script.js"></script>
+     <script src="js/mode.js"></script>
 </body>
 </html>

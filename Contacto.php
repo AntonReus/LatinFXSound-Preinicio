@@ -1,12 +1,12 @@
-<?php// include('../config/connection.php') ?>
-<?php include"../config/config.php" ?>
+<?php// include('config/connection.php') ?>
+<?php include"config/config.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
      <title>LATINFXSOUND*** - <?php echo $lang['Sound3']?></title>
-     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -15,18 +15,18 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="../css/bootstrap.min.css">
-     <link rel="stylesheet" href="../css/font-awesome.min.css">
-     <link rel="stylesheet" href="../css/aos.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
      
      <!--Multilanguage-->
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
+     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../css/principal.css">
-    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/blog.css">
 
 </head>    
   <header>
@@ -40,7 +40,7 @@
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<img src="../images/back/lo.png" width="150" height="115">Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic<img src="images/back/lo.png" width="150" height="115">Sound</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,11 +48,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
+                        <a href="index.php" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
+                        <a href="biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
 
                     <li class="nav-item">
@@ -93,7 +93,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/huevo.mp3">
+            <a href="audios/huevo.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['huevo']?>
             </a>
         </li>
@@ -102,7 +102,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/pajaros.mp3">
+            <a href="audios/pajaros.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
             </a>
         </li>
@@ -111,7 +111,7 @@
             <audio controls>
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/trailer.mp3">
+            <a href="audios/trailer.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
@@ -120,14 +120,14 @@
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/acelerar.mp3">
+            <a href="audios/acelerar.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>
 
         <li>
            
-            <a href="Paginas/AlbumCocina.php">
+            <a href="AlbumCocina.php">
                 <i class="fas fa-search"></i><?php echo $lang['AC']?>
             </a>
         </li>
@@ -176,15 +176,15 @@
      </section>
 
     <!-- SCRIPTS -->
-    <script src="../js/jquery.min.js"></script>
-     <script src="../js/bootstrap.min.js"></script>
-     <script src="../js/aos.js"></script>
-     <script src="../js/smoothscroll.js"></script>
-     <script src="../js/custom.js"></script>
-     <script src="../js/own.js"></script>
+    <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/own.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script src="../js/jquery-3.6.0.min.js"></script>
-     <script src="../js/script.js"></script>
-     <script src="../js/mode.js"></script>
+     <script src="js/jquery-3.6.0.min.js"></script>
+     <script src="js/script.js"></script>
+     <script src="js/mode.js"></script>
 </body>
 </html>

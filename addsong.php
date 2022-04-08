@@ -1,5 +1,5 @@
 <?
-include('../config/config.php');// conexion a la bd
+include('config/config.php');// conexion a la bd
 //$listPer=$conexion->query("SELECT * FROM personajes ORDER BY id_personaje");// lista los registros de la tabla
 
 if(isset($_POST['insertar']))//si apretamos el boton..

@@ -43,7 +43,7 @@
                         <a href="index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
+                        <a href="biblioteca.php" class="nav-link smoothScroll"><?php echo $lang['Nav3']?></a>
                     </li>
                 </ul>
                 --------------
@@ -74,7 +74,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/huevo.mp3">
+            <a href="audios/huevo.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['huevo']?>
             </a>
         </li>
@@ -83,7 +83,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/pajaros.mp3">
+            <a href="audios/pajaros.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
             </a>
         </li>
@@ -92,7 +92,7 @@
             <audio controls>
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/trailer.mp3">
+            <a href="audios/trailer.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
@@ -101,7 +101,7 @@
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/acelerar.mp3">
+            <a href="audios/acelerar.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>

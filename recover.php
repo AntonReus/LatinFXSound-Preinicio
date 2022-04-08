@@ -11,14 +11,14 @@ else if ($_GET['lang']  == "en")
     else if ($_GET['lang']  == "it")
     $_SESSION['lang'] = "it";
 }
-require_once "../config/" . $_SESSION['lang'] . ".php";
+require_once "config/" . $_SESSION['lang'] . ".php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
      <title><?php echo $lang['Title3']?> | Epic Sound FX</title>
-     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -26,26 +26,26 @@ require_once "../config/" . $_SESSION['lang'] . ".php";
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="../css/bootstrap.min.css">
-     <link rel="stylesheet" href="../css/font-awesome.min.css">
-     <link rel="stylesheet" href="../css/aos.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
      
-     <link rel="stylesheet" href="../css/bibliotecas.css">
+     <link rel="stylesheet" href="css/bibliotecas.css">
      
      <!--Multilanguage-->
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="../css/tooplate-gymso-style.css">
+     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../css/principal.css">
-    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 <header>
     <!--  MENU BAR  -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div><a class="navbar-brand" href="../index.php">Epic Sound FX</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@ require_once "../config/" . $_SESSION['lang'] . ".php";
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="../index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
+                        <a href="index.php" class="nav-link smoothScroll" id="Inicio"><?php echo $lang['Nav1']?></a>
                     </li>
                 </ul>
                 --------------
@@ -80,13 +80,13 @@ require_once "../config/" . $_SESSION['lang'] . ".php";
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="membershipFormLabel"><?php echo $lang['Rec1']?></h2>
-                    <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="../index.php">
+                    <a type="button" class="close" data-dismiss="modal" aria-label="Close" href="index.php">
                         <span aria-hidden="true">&times;</span>
                     </a>
                 </div>
                 <div class="modal-body">
                     <form method="post" class="membership-form webform" role="form" action="">
-                        <?php include('../web_services/errors.php'); ?>
+                        <?php include('errors.php'); ?>
                         <?php echo $lang['Rec2']?>
                         <div class="input-group">
                             <input type="email" name="login_var" value="<?php if(!empty($err)){ echo  $err; } ?>" class="form-control" required="" placeholder="<?php echo $lang['InSes2']?>">
@@ -119,14 +119,14 @@ require_once "../config/" . $_SESSION['lang'] . ".php";
         </div>
     </footer>
     <!-- SCRIPTS -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/aos.js"></script>
-    <script src="../js/smoothscroll.js"></script>
-    <script src="../js/custom.js"></script>
-    <script src="../js/own.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/own.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

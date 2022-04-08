@@ -77,7 +77,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/huevo.mp3">
+            <a href="audios/huevo.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['huevo']?>
             </a>
         </li>
@@ -86,7 +86,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/pajaros.mp3">
+            <a href="audios/pajaros.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
             </a>
         </li>
@@ -95,7 +95,7 @@
             <audio controls>
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/trailer.mp3">
+            <a href="audios/trailer.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
@@ -103,7 +103,7 @@
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/acelerar.mp3">
+            <a href="audios/acelerar.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>
@@ -130,7 +130,7 @@
                         </div>
                         <div class="modal-body">
                             <form method="post" class="membership-form webform" role="form" action="">
-                                <?php include('web_services/errors.php'); ?>
+                                <?php include('errors.php'); ?>
                                 <div class="input-group">
                                     <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
                                 </div>
@@ -141,7 +141,7 @@
                                     <button type="submit" class="form-control" id="login_user" name="login_user"><?php echo $lang['InSes4']?></button>
                                 </div>
                                 <br><p>
-                                <?php echo $lang['InSes5']?> <a href="web_services/registrer.php"><?php echo $lang['InSes6']?></a>
+                                <?php echo $lang['InSes5']?> <a href="registrer.php"><?php echo $lang['InSes6']?></a>
                                 </p>
                             </form>
                         </div>

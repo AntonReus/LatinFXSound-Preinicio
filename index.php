@@ -49,11 +49,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
+                        <a href="index.php" class="nav-link smoothScroll" id="Inicio"><b><?php echo $lang['Nav1']?></b></a>
                     </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a href="Paginas/biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
+                        <a href="biblioteca.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav3']?></b></a>
                     </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
@@ -94,7 +94,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/huevo.mp3">
+            <a href="audios/huevo.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['huevo']?>
             </a>
         </li>
@@ -103,7 +103,7 @@
             <audio controls>
                 <source src="audios/huevo.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/pajaros.mp3">
+            <a href="audios/pajaros.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['pajaros']?>
             </a>
         </li>
@@ -112,7 +112,7 @@
             <audio controls>
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/trailer.mp3">
+            <a href="audios/trailer.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
@@ -121,14 +121,14 @@
             <audio controls>
                 <source src="audios/acelerar.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
-            <a href="../audios/acelerar.mp3">
+            <a href="audios/acelerar.mp3">
                 <i class="fas fa-search"></i><?php echo $lang['acelerar']?>
             </a>
         </li>
 
         <li>
            
-            <a href="Paginas/AlbumCocina.php">
+            <a href="AlbumCocina.php">
                 <i class="fas fa-search"></i><?php echo $lang['AC']?>
             </a>
         </li>
@@ -149,7 +149,7 @@
                             <h6 data-aos="fade-up" data-aos-delay="300" class="hero3"><b><?php echo $lang['Hero1']?></b></h6>
                             <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"><?php echo $lang['Hero2']?></h1>
                             <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><b><?php echo $lang['Hero3']?></b></a>
-                            <a href="#about" class="hero4 hero3 btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><b><?php echo $lang['Hero4']?></b></a>
+                            <a href="login.php" class="hero4 hero3 btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700"><b><?php echo $lang['Hero4']?></b></a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                 <div class="d-flex flex-column justify-content-left ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
                     <h2 class="hero3" data-aos="fade-up"><?php echo $lang['Ini1']?></h2>
                     <h6 class="hero3" data-aos="fade-up"><b><?php echo $lang['Ini2']?></b></h6>
-                    <a href="web_services/registrer.php" class="hero4 hero3 btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="web_services/registrer.php"><b><?php echo $lang['Ini11']?></b></a>
+                    <a href="registrer.php" class="hero4 hero3 btn custom-btn bg-color mt-3"><b><?php echo $lang['Ini11']?></b></a>
                 </div>
 
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
@@ -263,9 +263,9 @@
                     <div class="row">
 
                             <div class="hero3 col-lg-12 col-12 text-center mb-5">
-                                <h6 class="hero3" data-aos="fade-up"><b>Miles de albumes libres de derecho</b></h6>
+                                <h6 class="hero3" data-aos="fade-up"><b><?php echo $lang['Alb1']?></b></h6>
 
-                                <h2 data-aos="fade-up" data-aos-delay="200">Los mas escuchados</h2>
+                                <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Alb2']?></h2>
                              </div>
 
                             <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
@@ -273,7 +273,7 @@
                                     <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
-                                        <a href="Paginas/AlbumCocina.php">
+                                        <a href="AlbumCocina.php">
                                             <h3 class="mb-1 hero3"><?php echo $lang['Sound3']?></h3>
                                         </a>
                        
@@ -396,7 +396,7 @@
                 </div>
                 <div class="modal-body">
                     <form method="post" class="membership-form webform" role="form" action="">
-                        <?php include('web_services/errors.php'); ?>
+                        <?php include('errors.php'); ?>
                         <div class="input-group">
                             <input type="email" class="form-control" name="user_email" placeholder="<?php echo $lang['InSes2']?>">
                         </div>
@@ -406,7 +406,7 @@
                         <div class="input-group">
                             <button type="submit" class="form-control" id="login_user" name="login_user"><?php echo $lang['InSes4']?></button>
                         </div>
-                        <br><p><?php echo $lang['InSes5']?> <a href="web_services/registrer.php"><?php echo $lang['InSes6']?></a></p>
+                        <br><p><?php echo $lang['InSes5']?> <a href="registrer.php"><?php echo $lang['InSes6']?></a></p>
                     </form>
                 </div>
             <div class="modal-footer"></div>

@@ -28,24 +28,24 @@
 
   @font-face {
       font-family: 'Plain';
-      src: url('../fonts/Plain-Regular.woff2') format('woff2'),
-          url('../fonts/Plain-Regular.woff') format('woff');
+      src: url('fonts/Plain-Regular.woff2') format('woff2'),
+          url('fonts/Plain-Regular.woff') format('woff');
       font-weight: normal;
       font-style: normal;
   }
 
   @font-face {
       font-family: 'Plain';
-      src: url('../fonts/Plain-Light.woff2') format('woff2'),
-          url('../fonts/Plain-Light.woff') format('woff');
+      src: url('fonts/Plain-Light.woff2') format('woff2'),
+          url('fonts/Plain-Light.woff') format('woff');
       font-weight: 300;
       font-style: normal;
   }
 
   @font-face {
       font-family: 'Plain';
-      src: url('../fonts/Plain-Bold.woff2') format('woff2'),
-          url('../fonts/Plain-Bold.woff') format('woff');
+      src: url('fonts/Plain-Bold.woff2') format('woff2'),
+          url('fonts/Plain-Bold.woff') format('woff');
       font-weight: bold;
       font-style: normal;
   }
@@ -389,7 +389,7 @@
   -----------------------------------------*/
 
   .hero{
-    background-image: url('../images/music.jpg');
+    background-image: url('images/music.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -403,7 +403,7 @@
   -----------------------------------------*/
 
   .forms::before {
-    background-image: url('../images/music.jpg');
+    background-image: url('images/music.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -433,7 +433,7 @@
   -----------------------------------------*/
 
   .registrer {
-    background-image: url('../images/biblioteca.jpg');
+    background-image: url('images/biblioteca.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

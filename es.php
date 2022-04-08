@@ -72,5 +72,8 @@
         "Cont5" => "Enviar",
         "Cont6" => "Direccion de la empresa",
         "Nav7" => "Cerrar Sesión",
+        "Alb1" => "Miles de albumes libres de derecho",
+        "Alb2" => "Los mas escuchados",
+        "Alb3" => "Añadir Album"
     )
 ?>

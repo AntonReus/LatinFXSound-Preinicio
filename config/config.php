@@ -68,7 +68,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
             mysqli_query($conn, $query);
             $_SESSION['success'] = "";
             //Href to biblioteca
-            header("Location: ../biblioteca.php");
+            header("Location: biblioteca.php");
         }
         else if (isset($_POST['reg_user'])) {
             if ($check_1 && $check_2) {
@@ -83,7 +83,7 @@ if (isset($_POST['reg_user']) || isset($_POST['reg_admin'])) {
                 $_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
                 $_SESSION['success']  = "You are now logged in";
                 //Href to biblioteca
-                header("Location: ../Paginas/biblioteca.php");
+                header("Location: biblioteca.php");
             }
             else
             {
@@ -130,14 +130,14 @@ if(isset($_POST['login_user']))
                     $_SESSION['user'] = $logged_in_user;
                     $_SESSION['success']  = "You are now logged in";
                     //Falta direccionar a biblioteca o a algo
-                    header('location: Paginas/biblioteca.php');
+                    header('location: biblioteca.php');
                 }
                 else if ($logged_in_user['user_type'] == 'user')
                 {
                     $_SESSION['user'] = $logged_in_user;
                     $_SESSION['success']  = "You are now logged in";
                     //Falta direccionar a biblioteca o a algo
-                    header('location: Paginas/biblioteca.php');
+                    header('location: biblioteca.php');
                 }
             }else {
                 array_push($errors, "La contraseña y el correo no coincide. Vuelva a intentar.");
@@ -183,7 +183,7 @@ if(isset($_POST['send_recover'])){
             $subject="Restauración de contraseña"; 
             $msg="Hola $oldftemail<br>Para cambiar tu contraseña por favor accede al siguiente link:<br>http://localhost/LatinFXSound-Preinicio/password_recovery/new_pass.php?token=".$token."<br>Si no eres tu por favor ignora este mensaje.<br><center>".$credits."</center>"; 
             if(@mail($oldftemail, $subject, $msg, $headers,'-f'.$FromEmail) ){
-                header("location:../pending.php?sent=1");
+                header("location:pending.php?sent=1");
                 $hide='1';
             }
         }   
