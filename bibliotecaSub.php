@@ -3,6 +3,10 @@ if (!isLoggedIn()) {
 	$_SESSION['msg'] = "You must log in first";
 	header('location: login.php');
 }
+if (!isSub()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: suscribete.php');
+}
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
@@ -68,10 +72,6 @@ if (isset($_GET['logout'])) {
                             <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion"><b><?php echo $lang['Nav7']?></b></a>
                         <?php endif ?>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a href="bibliotecaSub.php" class="nav-link smoothScroll"><b><?php echo $lang['Suscrito1']?></b></a>
-                    </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
                         <a href="admin_users.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav6']?></b></a>
@@ -92,8 +92,8 @@ if (isset($_GET['logout'])) {
         </div>
          <ul class="social-icon ml-lg-3">
             <li>
-                <a href="biblioteca.php?lang=es"><?php echo $lang['es']?></a>
-                <a href="biblioteca.php?lang=en"><?php echo $lang['en']?></a>
+                <a href="bibliotecaSub.php?lang=es"><?php echo $lang['es']?></a>
+                <a href="bibliotecaSub.php?lang=en"><?php echo $lang['en']?></a>
             </li>
         </ul>
     </nav>
@@ -217,6 +217,54 @@ if (isset($_GET['logout'])) {
                                         
 
                                         <p class="mt-3 hero3"><b><?php echo $lang['Sound14']?></b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                    <img src="images/class/Asmr.jpeg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound15']?></h3>
+
+                                        
+
+                                        
+
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound16']?></b></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                    <img src="images/class/Videojuegos.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound17']?></h3>
+
+                                        
+
+                                        
+
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound18']?></b></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                    <img src="images/class/Maquinaria.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="class-info">
+                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound19']?></h3>
+
+                                        
+
+                                        
+
+                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound20']?></b></p>
                                     </div>
                                 </div>
                             </div>

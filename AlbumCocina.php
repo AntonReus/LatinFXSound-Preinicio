@@ -48,7 +48,7 @@ if (isset($_GET['logout'])) {
                 </div>
             </div>
         <div class="container">
-            <div><a class="navbar-brand" href="index.php">Epic<!-- <img src="images/back/lo.png" width="150" height="115"> -->Sound</a></div>
+            <div><a class="navbar-brand" href="index.php">Epic Sound FX</a></div>
             <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -123,7 +123,7 @@ if (isset($_GET['logout'])) {
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
             <a href="audios/trailer.mp3">
-                <i class="fas fa-search"></i><?php echo $lang['trailer']?>
+                <i class="fas fa-search"></i><?php echo $lang['tráiler']?>
             </a>
         </li>
 

@@ -77,5 +77,13 @@
         "Alb2" => "Los mas escuchados",
         "Alb3" => "Añadir Album",
         "Sug1" => "Hemos recibido tu mensaje, pronto recibiras una contestación en tu correo electronico",
+        "Sound15" => "Sonidos ASMR",
+        "Sound16" => "Bombones, susurros, slime",
+        "Sound17" => "Sonidos de Videojuegos",
+        "Sound18" => "Apretar botones, apretar teclado, sonidos de golpes",
+        "Sound19" => "Sonidos de maquinaria",
+        "Sound20" => "Maquinaria, cierras, soldadoras",
+        "Info" => "Para acceder al contenido total debes suscribirte<br>Por solo 10 Dolares podras descargar todos los audios en el momento que gustes",
+        "Suscrito1" => "Biblioteca"
     )
 ?>

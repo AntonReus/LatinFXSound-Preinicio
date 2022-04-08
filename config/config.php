@@ -148,6 +148,13 @@ if(isset($_POST['login_user']))
                     //Falta direccionar a biblioteca o a algo
                     header('location: biblioteca.php');
                 }
+                else if ($logged_in_user['subscrited'] == '1')
+                {
+                    $_SESSION['user'] = $logged_in_user;
+                    $_SESSION['success']  = "You are now logged in";
+                    //Falta direccionar a biblioteca o a algo
+                    header('location: bibliotecaSub.php');
+                }
             }else {
                 array_push($errors, "La contraseña y el correo no coincide. Vuelva a intentar.");
             }
@@ -220,6 +227,14 @@ function isMod()
 function isAdmin()
 {
 	if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin' ) {
+		return true;
+	}else{
+		return false;
+	}
+}
+function isSub()
+{
+	if (isset($_SESSION['user']) && $_SESSION['user']['subscrited'] == '1' ) {
 		return true;
 	}else{
 		return false;
