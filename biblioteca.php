@@ -68,10 +68,6 @@ if (isset($_GET['logout'])) {
                             <a href="index.php?logout='1'" style="color:;" class="nav-link smoothScroll" id="CerrarSesion"><b><?php echo $lang['Nav7']?></b></a>
                         <?php endif ?>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a href="bibliotecaSub.php" class="nav-link smoothScroll"><b><?php echo $lang['Suscrito1']?></b></a>
-                    </li>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
                         <a href="admin_users.php" class="nav-link smoothScroll"><b><?php echo $lang['Nav6']?></b></a>
@@ -132,7 +128,7 @@ if (isset($_GET['logout'])) {
                 <source src="audios/trailer.mp3" type="audio/mp3"><?php echo $lang['Hero6']?>
             </audio>
             <a href="audios/trailer.mp3">
-                <i class="fas fa-search"></i><?php echo $lang['tráiler']?>
+                <i class="fas fa-search"></i><?php echo $lang['trailer']?>
             </a>
         </li>
 
@@ -165,61 +161,42 @@ if (isset($_GET['logout'])) {
                <div class="container">
                     <div class="row">
 
-                            <div class="hero3 col-lg-12 col-12 text-center mb-5">
-                                <h6 class="hero3" data-aos="fade-up"><b><?php echo $lang['Alb1']?></b></h6>
 
-                                <h2 data-aos="fade-up" data-aos-delay="200"><?php echo $lang['Alb2']?></h2>
-                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                                <div class="class-thumb">
-                                    <img src="images/class/cocinando.jpeg" class="img-fluid" alt="Class">
-
-                                    <form action="AlbumCocina.php" method="POST" name="buscar">
-                                        <div class="class-info">
-
-                                        <a href="AlbumCocina.php" name="bucsarC">
-                                            <h3 class="mb-1 hero3"><?php echo $lang['Sound3']?></h3>
-                                        </a>
-                       
-                                        <p class="mt-3 hero3" ><b><?php echo $lang['Sound6']?></b></p>
-                                    </div>
-                                    </form>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-                                <div class="class-thumb">
-                                    <img src="images/class/transportes.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="class-info">
-                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound7']?></h3>
-
-                                        
-
-                                        
-
-                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound10']?></b></p>
+                            
+                                        <?php
+        require("conexion/bd.php");
+        $db = conectar();
+        $sql = "SELECT * FROM albumes";
+        
+        $result = mysqli_query($db, $sql);
+        while ($mostrar = mysqli_fetch_array($result)) {
+        
+            
+    ?>        <form method="POST" id="<?php echo $mostrar['nombre'] ?>" name="nombre123" class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" href="album2.php"action="album2.php">
+                <a href="album2.php"  id="<?php echo $mostrar['nombre'] ?>" name="nombre123" value="<?php echo $mostrar['nombre'] ?>">
+                <div>
+                    <div class="class-thumb">
+                        <div class="class-info">
+                                        <h3 class="hero3">Album: <?php echo $mostrar['nombre'] ?></h3>                                        
+                                        <h4 class="mb-1 hero3"><b>Descripcion: </b></h4>
+                                        <p class="hero3"><b><?php echo $mostrar['descrpcion']?></b></p>                                               
+                                        <p class="hero3"><b>Categoria: </b><?php echo $mostrar['categoria']?></p>
+                                        <input type="hidden" value="<?php echo $mostrar['nombre'] ?>" name="nombre123" >
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-                                <div class="class-thumb">
-                                    <img src="images/class/natural.jpeg" class="img-fluid" alt="Class">
-
-                                    <div class="class-info">
-                                        <h3 class="mb-1 hero3"><?php echo $lang['Sound11']?></h3>
-
+          </a>
+           
+                </form>
+    <?php
+        }
+    ?>
                                         
 
                                         
 
-                                        <p class="mt-3 hero3"><b><?php echo $lang['Sound14']?></b></p>
-                                    </div>
-                                </div>
-                            </div>
+                                     
 
                     </div>
                </div>
@@ -227,7 +204,13 @@ if (isset($_GET['logout'])) {
     <footer style="" class="hero4 site-footer">
         <div class="container">
             <div class="row">
-                <a href="añadir.php" class="btn custom-btn bg-color mt-3"><?php echo $lang['Alb3']?></a>                    
+                <a href="añadir.php" class="btn custom-btn bg-color mt-3">Añadir cancion</a>                    
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <a href="addalb.php" class="btn custom-btn bg-color mt-3">Añadir album</a>                    
             </div>
         </div>
     </footer>
